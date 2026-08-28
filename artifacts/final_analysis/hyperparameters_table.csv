@@ -1,0 +1,60 @@
+component,parameter,value,source,protocol_arm
+OriginalRFECA_SVR,kernel,linear,svr_model.py / FREEZE config,TARGET-WISE
+OriginalRFECA_SVR,C,1.0,FREEZE config_snapshot,TARGET-WISE
+OriginalRFECA_SVR,epsilon,0.1,FREEZE config_snapshot,TARGET-WISE
+OriginalRFECA_SVR,use_scaler,false,FREEZE config_snapshot,TARGET-WISE
+OriginalRFECA_SVR,gamma,scale (sklearn default; unused for linear),sklearn SVR defaults,TARGET-WISE
+OriginalRFECA_SVR,shrinking,true (sklearn default),sklearn SVR defaults,TARGET-WISE
+OriginalRFECA_SVR,tol,1e-3 (sklearn default),sklearn SVR defaults,TARGET-WISE
+OriginalRFECA_SVR,cache_size,200 (sklearn default),sklearn SVR defaults,TARGET-WISE
+OriginalRFECA_RFE,estimator,SVR(kernel=linear),selection.py,TARGET-WISE
+OriginalRFECA_RFE,step,1 (sklearn default),sklearn RFE,TARGET-WISE
+OriginalRFECA_RFE,n_features_to_select,None → n_features//2,sklearn RFE,TARGET-WISE
+OriginalRFECA_selection,selection_protocol,leakage_safe,FREEZE,TARGET-WISE
+OriginalRFECA_selection,max_candidates,49,FREEZE,TARGET-WISE
+OriginalRFECA_selection,candidate_rule,full_matrix,OriginalRFECA,TARGET-WISE
+OriginalRFECA_selection,min_train_samples,10,code defaults / config,TARGET-WISE
+OriginalRFECA_inner_CV,validation_strategy,kfold,FREEZE,TARGET-WISE
+OriginalRFECA_inner_CV,n_splits,5,FREEZE,TARGET-WISE
+OriginalRFECA_inner_CV,random_state,42,code / config,TARGET-WISE
+OriginalRFECA_eval,evaluation_protocol,repeated_mask_holdout,FREEZE,TARGET-WISE
+OriginalRFECA_eval,input_protocol,target_wise_complete_predictors,FREEZE,TARGET-WISE
+OriginalRFECA_eval,predictor_values,original_complete_matrix,FREEZE,TARGET-WISE
+OriginalRFECA_parallel,gene_workers,16,FREEZE,TARGET-WISE
+OriginalRFECA_parallel,blas_threads,1,FREEZE / parallel_genes,TARGET-WISE
+OriginalRFECA_seeds,base_seed,42,FREEZE,TARGET-WISE
+OriginalRFECA_seeds,seed_scheme,v2,FREEZE,TARGET-WISE
+OriginalRFECA_grid,mechanisms,"MCAR,MAR",FREEZE,TARGET-WISE
+OriginalRFECA_grid,missing_rates,"0.05,0.10,0.20,0.30",FREEZE,TARGET-WISE
+OriginalRFECA_grid,n_reps,5,FREEZE,TARGET-WISE
+Mean,strategy,mean,SimpleImputer,baselines_CV
+KNN,n_neighbors,5,imputers.py / config,baselines_CV
+KNN,weights,distance,imputers.py / config,baselines_CV
+MissForest_like,base_estimator,ExtraTreesRegressor(n_estimators=20),imputers.py,baselines_CV
+MissForest_like,max_iter,5,imputers.py,baselines_CV
+MissForest_like,random_state,42,imputers.py,baselines_CV
+MissForest_like,sample_posterior,false,imputers.py,baselines_CV
+MissForest_like,skip_complete,true,imputers.py,baselines_CV
+MissForest_like,n_jobs,4,full_benchmark_config,baselines_CV
+Baselines_CV,n_splits,5,StratifiedKFold,baselines_CV
+Baselines_CV,cv_shuffle,true,config,baselines_CV
+Baselines_CV,cv_random_state,42,config,baselines_CV
+Baselines_CV,n_reps,10,metabric_full config_snapshot,baselines_CV
+Baselines_CV,seed_scheme,legacy,AUDIT / artefacts,baselines_CV
+Baselines_CV,base_seed,42,config_snapshot,baselines_CV
+Baselines_CV,missing_rates,"0,0.05,0.10,0.20,0.30",config_snapshot,baselines_CV
+Baselines_CV,target_cell_policy,originally_observed_only,config,baselines_CV
+Classifier_SVC,kernel,rbf,pipelines.py,both_classif
+Classifier_SVC,C,1.0,pipelines.py,both_classif
+Classifier_SVC,gamma,scale,pipelines.py,both_classif
+Classifier_SVC,probability,true (EnsembleSoft member),pipelines.py,both_classif
+Classifier_LogReg,max_iter,5000,pipelines.py,both_classif
+Classifier_RF,n_estimators,200,pipelines.py,both_classif
+Classifier_RF,random_state,42,pipelines.py,both_classif
+Classifier_GB,random_state,42,pipelines.py,both_classif
+Classifier_EnsembleSoft,voting,soft (SVC+LogReg+RF+GB),pipelines.py,both_classif
+Classifier_CV,n_splits,5,StratifiedKFold,both_classif
+Classifier_CV,random_state,42,pipelines.py,both_classif
+Missingness_MCAR,exact_count,true,missingness.py,both
+Missingness_MAR,predictor,leave_one_out_row_mean_abs_z_plus_gumbel,missingness.py,both
+Missingness,target_cell_policy,originally_observed_only,config,both

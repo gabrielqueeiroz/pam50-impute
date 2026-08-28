@@ -1,0 +1,19 @@
+stage,imputer,model,missing_rate,replicate,fold,f1_macro,bal_acc,n_train,n_test,train_class_distribution,test_class_distribution,n_unique_predictions,degenerate_single_class_preds,seed
+classification,SimpleMean,EnsembleSoft,0.1,0,1,0.9804318488529015,0.975,78,39,"{'Basal': 19, 'Her2': 9, 'LumA': 38, 'LumB': 12}","{'Basal': 10, 'Her2': 5, 'LumA': 19, 'LumB': 5}",4,False,1052
+classification,SimpleMean,EnsembleSoft,0.1,0,2,0.9708624708624709,0.9583333333333334,78,39,"{'Basal': 19, 'Her2': 10, 'LumA': 38, 'LumB': 11}","{'Basal': 10, 'Her2': 4, 'LumA': 19, 'LumB': 6}",4,False,1052
+classification,SimpleMean,EnsembleSoft,0.1,0,3,0.903929539295393,0.8666666666666666,78,39,"{'Basal': 20, 'Her2': 9, 'LumA': 38, 'LumB': 11}","{'Basal': 9, 'Her2': 5, 'LumA': 19, 'LumB': 6}",4,False,1052
+classification,"KNN(k=5,dist)",EnsembleSoft,0.1,0,1,0.9804318488529015,0.975,78,39,"{'Basal': 19, 'Her2': 9, 'LumA': 38, 'LumB': 12}","{'Basal': 10, 'Her2': 5, 'LumA': 19, 'LumB': 5}",4,False,1052
+classification,"KNN(k=5,dist)",EnsembleSoft,0.1,0,2,0.9708624708624709,0.9583333333333334,78,39,"{'Basal': 19, 'Her2': 10, 'LumA': 38, 'LumB': 11}","{'Basal': 10, 'Her2': 4, 'LumA': 19, 'LumB': 6}",4,False,1052
+classification,"KNN(k=5,dist)",EnsembleSoft,0.1,0,3,0.8636904761904762,0.8166666666666667,78,39,"{'Basal': 20, 'Her2': 9, 'LumA': 38, 'LumB': 11}","{'Basal': 9, 'Her2': 5, 'LumA': 19, 'LumB': 6}",4,False,1052
+classification,RFECA_SVR(k=5),EnsembleSoft,0.1,0,1,0.94656432748538,0.925,78,39,"{'Basal': 19, 'Her2': 9, 'LumA': 38, 'LumB': 12}","{'Basal': 10, 'Her2': 5, 'LumA': 19, 'LumB': 5}",4,False,1052
+classification,RFECA_SVR(k=5),EnsembleSoft,0.1,0,2,0.9708624708624709,0.9583333333333334,78,39,"{'Basal': 19, 'Her2': 10, 'LumA': 38, 'LumB': 11}","{'Basal': 10, 'Her2': 4, 'LumA': 19, 'LumB': 6}",4,False,1052
+classification,RFECA_SVR(k=5),EnsembleSoft,0.1,0,3,0.903929539295393,0.8666666666666666,78,39,"{'Basal': 20, 'Her2': 9, 'LumA': 38, 'LumB': 11}","{'Basal': 9, 'Her2': 5, 'LumA': 19, 'LumB': 6}",4,False,1052
+classification,SimpleMean,EnsembleSoft,0.1,1,1,1.0,1.0,78,39,"{'Basal': 19, 'Her2': 9, 'LumA': 38, 'LumB': 12}","{'Basal': 10, 'Her2': 5, 'LumA': 19, 'LumB': 5}",4,False,1053
+classification,SimpleMean,EnsembleSoft,0.1,1,2,0.9290584415584415,0.8958333333333334,78,39,"{'Basal': 19, 'Her2': 10, 'LumA': 38, 'LumB': 11}","{'Basal': 10, 'Her2': 4, 'LumA': 19, 'LumB': 6}",4,False,1053
+classification,SimpleMean,EnsembleSoft,0.1,1,3,0.903929539295393,0.8666666666666666,78,39,"{'Basal': 20, 'Her2': 9, 'LumA': 38, 'LumB': 11}","{'Basal': 9, 'Her2': 5, 'LumA': 19, 'LumB': 6}",4,False,1053
+classification,"KNN(k=5,dist)",EnsembleSoft,0.1,1,1,0.929926798347851,0.925,78,39,"{'Basal': 19, 'Her2': 9, 'LumA': 38, 'LumB': 12}","{'Basal': 10, 'Her2': 5, 'LumA': 19, 'LumB': 5}",4,False,1053
+classification,"KNN(k=5,dist)",EnsembleSoft,0.1,1,2,0.9708624708624709,0.9583333333333334,78,39,"{'Basal': 19, 'Her2': 10, 'LumA': 38, 'LumB': 11}","{'Basal': 10, 'Her2': 4, 'LumA': 19, 'LumB': 6}",4,False,1053
+classification,"KNN(k=5,dist)",EnsembleSoft,0.1,1,3,0.903929539295393,0.8666666666666666,78,39,"{'Basal': 20, 'Her2': 9, 'LumA': 38, 'LumB': 11}","{'Basal': 9, 'Her2': 5, 'LumA': 19, 'LumB': 6}",4,False,1053
+classification,RFECA_SVR(k=5),EnsembleSoft,0.1,1,1,0.9158119658119659,0.8999999999999999,78,39,"{'Basal': 19, 'Her2': 9, 'LumA': 38, 'LumB': 12}","{'Basal': 10, 'Her2': 5, 'LumA': 19, 'LumB': 5}",4,False,1053
+classification,RFECA_SVR(k=5),EnsembleSoft,0.1,1,2,0.9162087912087913,0.8958333333333334,78,39,"{'Basal': 19, 'Her2': 10, 'LumA': 38, 'LumB': 11}","{'Basal': 10, 'Her2': 4, 'LumA': 19, 'LumB': 6}",4,False,1053
+classification,RFECA_SVR(k=5),EnsembleSoft,0.1,1,3,0.903929539295393,0.8666666666666666,78,39,"{'Basal': 20, 'Her2': 9, 'LumA': 38, 'LumB': 11}","{'Basal': 9, 'Her2': 5, 'LumA': 19, 'LumB': 6}",4,False,1053

@@ -1,0 +1,13 @@
+{
+  "heatmap_methods_with_data": [
+    "OriginalRFECA"
+  ],
+  "heatmap_methods_nan": [
+    "Mean",
+    "KNN",
+    "MissForest"
+  ],
+  "reason": "Baseline final artifacts lack per-gene RMSE",
+  "interpolation": false,
+  "zscore_note": "Per-gene z-score across methods is undefined when fewer than 2 methods have values; cells remain NaN."
+}

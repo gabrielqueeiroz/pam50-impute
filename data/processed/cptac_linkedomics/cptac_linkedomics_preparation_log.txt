@@ -1,0 +1,18 @@
+[2026-07-19T21:48:40Z] ROOT=<repo-root>
+[2026-07-19T21:48:40Z] Using existing clinical raw: <repo-root>\data\raw\cptac_linkedomics\HS_CPTAC_BRCA_2018_CLI.tsi
+[2026-07-19T21:48:40Z] Using existing RNAseq raw: <repo-root>\data\raw\cptac_linkedomics\HS_CPTAC_BRCA_2018_RNA_GENE.cct
+[2026-07-19T21:48:40Z] Clinical sha256=a072816c1fdf5a51351a05a95805eb704a000ab90ef497859ebd4c0189a43598
+[2026-07-19T21:48:40Z] RNAseq sha256=9ee62a181313fce7b0d272b1d4a85782eb74b16cc6ac989adc96f4200461810f
+[2026-07-19T21:48:40Z] Samples in RNAseq=122 clinical=122 intersection=122
+[2026-07-19T21:48:40Z] Built source table shape=(122, 51)
+[2026-07-19T21:48:40Z] Class distribution before filtering: {'LumA': 57, 'Basal': 29, 'LumB': 17, 'Her2': 14, 'Normal-like': 5}
+[2026-07-19T21:48:40Z] Class distribution after filtering: {'LumA': 38, 'Basal': 20, 'Her2': 12, 'LumB': 10}
+[2026-07-19T21:48:40Z] Excluded n=42
+[2026-07-19T21:48:40Z] All preparation assertions PASSED.
+[2026-07-19T21:48:40Z] Wrote <repo-root>\data\processed\cptac_linkedomics\cptac_linkedomics_pam50_4class.csv
+[2026-07-19T21:48:40Z] Determinism check (repeated preparation) PASSED.
+[2026-07-19T21:48:40Z] Wrote <repo-root>\data\processed\cptac_linkedomics\cptac_linkedomics_excluded_samples.csv (n=42)
+[2026-07-19T21:48:40Z] ========================================================================
+[2026-07-19T21:48:40Z] CPTAC LINKEDOMICS PREPARATION COMPLETE
+[2026-07-19T21:48:40Z] n=80 class_distribution={'LumA': 38, 'Basal': 20, 'Her2': 12, 'LumB': 10}
+[2026-07-19T21:48:40Z] STOPPING after preparation (no benchmark).

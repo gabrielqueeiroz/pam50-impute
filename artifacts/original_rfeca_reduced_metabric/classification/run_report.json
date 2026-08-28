@@ -1,0 +1,32 @@
+{
+  "status": "OK",
+  "protocol": "post_target_wise_impute_identity_cv",
+  "note": "RFECA classification uses already-imputed matrices (identity imputer). Baselines Mean/KNN/MissForest keep imputer-within-CV from metabric_full.",
+  "n_slots_classified": 0,
+  "n_slots_resumed": 40,
+  "n_slots_missing_done": 0,
+  "missing_slots": [],
+  "classifiers": [
+    "EnsembleSoft",
+    "SVC",
+    "LogReg",
+    "RF",
+    "GB"
+  ],
+  "rates": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "mechanisms": [
+    "mcar",
+    "mar"
+  ],
+  "wall_seconds": 0.10170820000348613,
+  "finished_at_utc": "2026-08-03T16:14:11.341845+00:00",
+  "artifacts": {
+    "raw": "artifacts\\original_rfeca_reduced_metabric\\classification\\exp2_classification_raw.csv",
+    "summary": "artifacts\\original_rfeca_reduced_metabric\\classification\\exp2_classification_summary.csv"
+  }
+}

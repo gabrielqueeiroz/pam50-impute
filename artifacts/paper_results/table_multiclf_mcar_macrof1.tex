@@ -1,0 +1,40 @@
+% Superseded by table_multiclf_macrof1.tex (MCAR+MAR complete)
+% Auto-generated from metabric_multiclf MCAR+MAR runs
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{METABRIC imputer$\times$classifier Macro-F1 under MCAR and MAR at 20\% and 30\% missingness. Best imputer per row in \textbf{bold}. Entries are mean $\pm$ SD across 10 missingness replications (fold-averaged within replication).}
+\label{tab:metabric_multiclf}
+\setlength{\tabcolsep}{2.8pt}
+\begin{tabular}{llcccccc}
+\hline
+Rate & Classifier & Mean & KNN & RFECA-k5 & RFECA-k10 & RFECA-k20 & MissForest \\
+\hline
+\multicolumn{8}{l}{\textit{MCAR}} \\
+20\% & SVC & 0.861 $\pm$ 0.004 & 0.865 $\pm$ 0.005 & 0.868 $\pm$ 0.003 & 0.871 $\pm$ 0.003 & \textbf{0.872 $\pm$ 0.003} & 0.870 $\pm$ 0.003 \\
+ & LogReg & 0.850 $\pm$ 0.006 & 0.859 $\pm$ 0.003 & 0.856 $\pm$ 0.005 & 0.858 $\pm$ 0.004 & 0.858 $\pm$ 0.004 & \textbf{0.860 $\pm$ 0.006} \\
+ & RF & 0.847 $\pm$ 0.006 & 0.853 $\pm$ 0.004 & 0.855 $\pm$ 0.003 & 0.859 $\pm$ 0.005 & \textbf{0.861 $\pm$ 0.003} & 0.860 $\pm$ 0.004 \\
+ & GB & 0.844 $\pm$ 0.007 & 0.856 $\pm$ 0.005 & 0.855 $\pm$ 0.006 & 0.855 $\pm$ 0.007 & 0.859 $\pm$ 0.006 & \textbf{0.860 $\pm$ 0.006} \\
+ & EnsembleSoft & 0.866 $\pm$ 0.004 & 0.869 $\pm$ 0.005 & 0.872 $\pm$ 0.006 & 0.872 $\pm$ 0.005 & 0.874 $\pm$ 0.003 & \textbf{0.874 $\pm$ 0.005} \\
+\hline
+30\% & SVC & 0.850 $\pm$ 0.007 & 0.858 $\pm$ 0.007 & 0.863 $\pm$ 0.008 & 0.864 $\pm$ 0.006 & 0.865 $\pm$ 0.006 & \textbf{0.865 $\pm$ 0.005} \\
+ & LogReg & 0.838 $\pm$ 0.009 & 0.849 $\pm$ 0.005 & 0.852 $\pm$ 0.007 & 0.852 $\pm$ 0.004 & \textbf{0.854 $\pm$ 0.005} & 0.854 $\pm$ 0.008 \\
+ & RF & 0.831 $\pm$ 0.008 & 0.845 $\pm$ 0.006 & 0.848 $\pm$ 0.005 & 0.849 $\pm$ 0.007 & 0.852 $\pm$ 0.006 & \textbf{0.854 $\pm$ 0.006} \\
+ & GB & 0.832 $\pm$ 0.010 & 0.845 $\pm$ 0.008 & 0.847 $\pm$ 0.006 & 0.850 $\pm$ 0.005 & \textbf{0.852 $\pm$ 0.007} & 0.851 $\pm$ 0.007 \\
+ & EnsembleSoft & 0.855 $\pm$ 0.007 & 0.858 $\pm$ 0.006 & 0.862 $\pm$ 0.006 & 0.864 $\pm$ 0.005 & 0.864 $\pm$ 0.004 & \textbf{0.866 $\pm$ 0.005} \\
+\hline
+\multicolumn{8}{l}{\textit{MAR}} \\
+20\% & SVC & 0.862 $\pm$ 0.004 & 0.870 $\pm$ 0.002 & \textbf{0.872 $\pm$ 0.004} & 0.872 $\pm$ 0.004 & 0.872 $\pm$ 0.005 & 0.870 $\pm$ 0.004 \\
+ & LogReg & 0.851 $\pm$ 0.006 & 0.859 $\pm$ 0.003 & 0.856 $\pm$ 0.007 & 0.858 $\pm$ 0.008 & 0.858 $\pm$ 0.008 & \textbf{0.861 $\pm$ 0.005} \\
+ & RF & 0.849 $\pm$ 0.005 & 0.853 $\pm$ 0.005 & 0.853 $\pm$ 0.007 & \textbf{0.857 $\pm$ 0.006} & 0.855 $\pm$ 0.006 & 0.854 $\pm$ 0.005 \\
+ & GB & 0.843 $\pm$ 0.006 & 0.856 $\pm$ 0.009 & 0.859 $\pm$ 0.007 & \textbf{0.860 $\pm$ 0.005} & 0.860 $\pm$ 0.007 & 0.857 $\pm$ 0.007 \\
+ & EnsembleSoft & 0.864 $\pm$ 0.004 & 0.872 $\pm$ 0.005 & \textbf{0.873 $\pm$ 0.007} & 0.872 $\pm$ 0.007 & 0.870 $\pm$ 0.006 & 0.871 $\pm$ 0.006 \\
+\hline
+30\% & SVC & 0.843 $\pm$ 0.007 & 0.848 $\pm$ 0.006 & 0.856 $\pm$ 0.006 & 0.855 $\pm$ 0.007 & \textbf{0.857 $\pm$ 0.008} & 0.857 $\pm$ 0.005 \\
+ & LogReg & 0.833 $\pm$ 0.009 & 0.838 $\pm$ 0.007 & 0.847 $\pm$ 0.010 & 0.846 $\pm$ 0.007 & 0.848 $\pm$ 0.009 & \textbf{0.851 $\pm$ 0.009} \\
+ & RF & 0.830 $\pm$ 0.005 & 0.833 $\pm$ 0.004 & 0.842 $\pm$ 0.005 & 0.846 $\pm$ 0.006 & \textbf{0.849 $\pm$ 0.006} & 0.847 $\pm$ 0.007 \\
+ & GB & 0.822 $\pm$ 0.008 & 0.833 $\pm$ 0.008 & 0.844 $\pm$ 0.007 & \textbf{0.845 $\pm$ 0.006} & 0.843 $\pm$ 0.008 & 0.845 $\pm$ 0.006 \\
+ & EnsembleSoft & 0.848 $\pm$ 0.010 & 0.848 $\pm$ 0.006 & 0.860 $\pm$ 0.008 & 0.861 $\pm$ 0.008 & \textbf{0.861 $\pm$ 0.007} & 0.861 $\pm$ 0.006 \\
+\hline
+\end{tabular}
+\end{table}

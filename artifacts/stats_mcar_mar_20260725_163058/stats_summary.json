@@ -1,0 +1,41 @@
+{
+  "generated_at_utc": "2026-07-25T16:31:05.717292+00:00",
+  "runs": [
+    {
+      "cohort": "discovery",
+      "mechanism": "mcar",
+      "dir": "<repo-root>\\artifacts\\discovery_full_20260724_172348"
+    },
+    {
+      "cohort": "metabric",
+      "mechanism": "mcar",
+      "dir": "<repo-root>\\artifacts\\metabric_full_20260724_185916"
+    },
+    {
+      "cohort": "discovery",
+      "mechanism": "mar",
+      "dir": "<repo-root>\\artifacts\\discovery_full_mar_20260725_045052"
+    },
+    {
+      "cohort": "metabric",
+      "mechanism": "mar",
+      "dir": "<repo-root>\\artifacts\\metabric_full_mar_20260725_062517"
+    }
+  ],
+  "n_pairwise_rows": 720,
+  "n_primary_rows": 384,
+  "n_metabric_f1_sig_holm05": 22,
+  "output_dir": "<repo-root>\\artifacts\\stats_mcar_mar_20260725_163058",
+  "bullets": [
+    "METABRIC MCAR F1 primary contrasts with Holm p<0.05: **10** (of 32 tested).",
+    "METABRIC MAR F1 primary contrasts with Holm p<0.05: **12** (of 32 tested).",
+    "MissForest vs Mean | MAR @ 5%: \u0394F1=-0.0001, r_rb=-0.127, p=0.7695, p_Holm=1.",
+    "MissForest vs Mean | MAR @ 10%: \u0394F1=+0.0048, r_rb=0.782, p=0.02734, p_Holm=0.2188.",
+    "MissForest vs Mean | MAR @ 20%: \u0394F1=+0.0072, r_rb=0.964, p=0.003906, p_Holm=0.02344.",
+    "MissForest vs Mean | MAR @ 30%: \u0394F1=+0.0126, r_rb=1.000, p=0.001953, p_Holm=0.01562.",
+    "MissForest vs Mean | MCAR @ 5%: \u0394F1=+0.0025, r_rb=0.527, p=0.1602, p_Holm=0.6543.",
+    "MissForest vs Mean | MCAR @ 10%: \u0394F1=+0.0039, r_rb=0.709, p=0.04883, p_Holm=0.2441.",
+    "MissForest vs Mean | MCAR @ 20%: \u0394F1=+0.0081, r_rb=1.000, p=0.001953, p_Holm=0.01562.",
+    "MissForest vs Mean | MCAR @ 30%: \u0394F1=+0.0111, r_rb=1.000, p=0.001953, p_Holm=0.01562."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "corr_csv_path": "correlation_table_pam50_full.csv",
+  "n_reps": 10,
+  "n_splits": 5,
+  "random_state": 42,
+  "missing_rates_exp1": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "missing_rates_exp2": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "imputers": [
+    "SimpleMean",
+    "KNN(k=5,dist)",
+    "RFECA_SVR(k=20)"
+  ],
+  "exp2_models": [
+    "SVC",
+    "LogReg",
+    "RF",
+    "GB",
+    "EnsembleSoft",
+    "EnsembleHard"
+  ]
+}

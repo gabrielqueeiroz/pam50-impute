@@ -1,0 +1,117 @@
+{
+  "generated_at_utc": "2026-08-02T16:14:09.697371+00:00",
+  "n_checks": 19,
+  "n_pass": 19,
+  "n_fail": 0,
+  "issues": [],
+  "checks": [
+    {
+      "check": "protocol_evaluation_protocol",
+      "pass": true,
+      "expected": "repeated_mask_holdout"
+    },
+    {
+      "check": "protocol_input_protocol",
+      "pass": true,
+      "expected": "target_wise_complete_predictors"
+    },
+    {
+      "check": "protocol_predictor_values",
+      "pass": true,
+      "expected": "original_complete_matrix"
+    },
+    {
+      "check": "protocol_selection_protocol",
+      "pass": true,
+      "expected": "leakage_safe"
+    },
+    {
+      "check": "use_scaler_false",
+      "pass": true
+    },
+    {
+      "check": "max_candidates_49",
+      "pass": true
+    },
+    {
+      "check": "all_slots_class_A",
+      "pass": true
+    },
+    {
+      "check": "svr_coverage_1",
+      "pass": true
+    },
+    {
+      "check": "zero_fallbacks_and_pred_nans",
+      "pass": true
+    },
+    {
+      "check": "report_match_mar_10",
+      "pass": true,
+      "delta_rmse": 0.0,
+      "delta_mae": 0.0
+    },
+    {
+      "check": "report_match_mar_20",
+      "pass": true,
+      "delta_rmse": 0.0,
+      "delta_mae": 0.0
+    },
+    {
+      "check": "report_match_mar_30",
+      "pass": true,
+      "delta_rmse": 0.0,
+      "delta_mae": 0.0
+    },
+    {
+      "check": "report_match_mcar_10",
+      "pass": true,
+      "delta_rmse": 0.0,
+      "delta_mae": 0.0
+    },
+    {
+      "check": "report_match_mcar_20",
+      "pass": true,
+      "delta_rmse": 0.0,
+      "delta_mae": 0.0
+    },
+    {
+      "check": "report_match_mcar_30",
+      "pass": true,
+      "delta_rmse": 0.0,
+      "delta_mae": 0.0
+    },
+    {
+      "check": "freeze_mask_hash_match",
+      "pass": true
+    },
+    {
+      "check": "freeze_seed_match",
+      "pass": true
+    },
+    {
+      "check": "per_gene_row_count",
+      "pass": true,
+      "n": 1500,
+      "expected": 1500
+    },
+    {
+      "check": "per_gene_all_ok",
+      "pass": true
+    }
+  ],
+  "rounding_policy": {
+    "rmse_decimals": 3,
+    "mae_decimals": 3,
+    "method": "half-up",
+    "full_precision_files": [
+      "*_full.csv",
+      "slot_level_full.csv"
+    ],
+    "display_files": [
+      "*_display.csv",
+      "table_*.tex",
+      "figure annotations"
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "generated_at_utc": "2026-07-19T21:31:35.845155+00:00",
+  "cohort_key": "discovery",
+  "scientific_name_policy": "CPTAC-derived laboratory discovery cohort",
+  "provenance": {
+    "confidence": "High \u2014 CPTAC-derived laboratory cohort",
+    "scientific_identity": "CPTAC-derived laboratory discovery cohort",
+    "linkedomics_note": "Cannot reproduce the final matrix byte-for-byte from the public LinkedOmics HS_CPTAC_BRCA_2018_RNA_GENE.cct export (affine scale difference); laboratory cptac.csv is the authoritative pre-imputation input."
+  },
+  "source_files": {
+    "raw_matrix": {
+      "path": "<repo-root>\\data\\raw\\discovery\\df_MI_no_missing.csv",
+      "sha256": "21674b6bc19c0b44417729169cb16189e890129ee02cc87df16aa498f4b45ac6",
+      "bytes": 45554,
+      "immutable_policy": "Do not modify files under data/raw/discovery/."
+    }
+  },
+  "sample_ids": {
+    "status": "recovered_Patient_ID",
+    "biological_ids_available": true,
+    "mapping_audit": "<repo-root>\\artifacts\\discovery_preparation\\discovery_sample_id_mapping.csv"
+  },
+  "filtering": {
+    "n_source_rows": 117,
+    "n_final_samples": 117,
+    "n_excluded": 0,
+    "class_counts_before": {
+      "LumA": 57,
+      "Basal": 29,
+      "LumB": 17,
+      "Her2": 14
+    },
+    "class_counts_after": {
+      "LumA": 57,
+      "Basal": 29,
+      "LumB": 17,
+      "Her2": 14
+    },
+    "expected_class_counts": {
+      "LumA": 57,
+      "Basal": 29,
+      "LumB": 17,
+      "Her2": 14
+    }
+  },
+  "preprocessing_decisions": [
+    "Source CSV read with index_col=0 (matches original notebook).",
+    "Retained exact 50 PAM50 genes in canonical study order.",
+    "No expression transformation applied (values copied as-is).",
+    "No scaling/centering applied at preparation time.",
+    "Rows with labels outside LumA/LumB/Her2/Basal excluded if present.",
+    "Rows with any NA among the 50 genes excluded if present.",
+    "Synthetic IDs used only when biological IDs are unavailable.",
+    "Cohort key remains 'discovery' (not renamed to CPTAC)."
+  ],
+  "final_matrix": {
+    "path": "<repo-root>\\data\\processed\\discovery\\discovery_pam50_4class.csv",
+    "fingerprint": {
+      "n_samples": 117,
+      "n_genes": 50,
+      "genes": [
+        "ACTR3B",
+        "ANLN",
+        "BAG1",
+        "BCL2",
+        "BIRC5",
+        "BLVRA",
+        "CCNB1",
+        "CCNE1",
+        "CDC20",
+        "CDC6",
+        "NUF2",
+        "CDH3",
+        "CENPF",
+        "CEP55",
+        "CXXC5",
+        "EGFR",
+        "ERBB2",
+        "ESR1",
+        "EXO1",
+        "FGFR4",
+        "FOXA1",
+        "FOXC1",
+        "GPR160",
+        "GRB7",
+        "KIF2C",
+        "NDC80",
+        "KRT14",
+        "KRT17",
+        "KRT5",
+        "MAPT",
+        "MDM2",
+        "MELK",
+        "MIA",
+        "MKI67",
+        "MLPH",
+        "MMP11",
+        "MYBL2",
+        "MYC",
+        "NAT1",
+        "ORC6",
+        "PGR",
+        "PHGDH",
+        "PTTG1",
+        "RRM2",
+        "SFRP1",
+        "SLC39A6",
+        "TMEM45B",
+        "TYMS",
+        "UBE2C",
+        "UBE2T"
+      ],
+      "class_distribution": {
+        "LumA": 57,
+        "Basal": 29,
+        "LumB": 17,
+        "Her2": 14
+      },
+      "values_and_labels_sha256": "282a34939979593ddf95ff172be9da60c6e2c552bbb104b25fb866c9b01b35ff",
+      "full_matrix_sha256": "26773ef0848759b69c405047c5c91cc834fe84e9727377229e291bf4d73bd4f2",
+      "observation_mask_sha256": "afa167430a94ae3803734590548661a4dcc39a1004647278910c49b1569870b1",
+      "n_originally_observed_cells": 5804,
+      "n_legacy_imputed_cells": 46
+    }
+  },
+  "artifacts": {
+    "discovery_inventory.json": "<repo-root>\\data\\processed\\discovery\\discovery_inventory.json",
+    "discovery_provenance_report.md": "<repo-root>\\data\\processed\\discovery\\discovery_provenance_report.md",
+    "discovery_preparation_log.txt": "<repo-root>\\data\\processed\\discovery\\discovery_preparation_log.txt",
+    "discovery_excluded_samples.csv": "<repo-root>\\data\\processed\\discovery\\discovery_excluded_samples.csv",
+    "discovery_pam50_4class.csv": "<repo-root>\\data\\processed\\discovery\\discovery_pam50_4class.csv",
+    "discovery_fingerprint.json": "<repo-root>\\data\\processed\\discovery\\discovery_fingerprint.json"
+  },
+  "observation_mask": "<repo-root>\\data\\processed\\discovery\\discovery_originally_observed_mask.csv"
+}

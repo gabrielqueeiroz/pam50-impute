@@ -1,0 +1,39 @@
+{
+  "rates": [
+    0.1,
+    0.3
+  ],
+  "mechanisms": [
+    "mcar",
+    "mar"
+  ],
+  "replicates": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "slots": {
+    "mcar/rate_0.10/rep_0": true,
+    "mcar/rate_0.10/rep_1": true,
+    "mcar/rate_0.10/rep_2": true,
+    "mcar/rate_0.10/rep_3": true,
+    "mcar/rate_0.10/rep_4": true,
+    "mcar/rate_0.30/rep_0": true,
+    "mcar/rate_0.30/rep_1": true,
+    "mcar/rate_0.30/rep_2": true,
+    "mcar/rate_0.30/rep_3": true,
+    "mcar/rate_0.30/rep_4": true,
+    "mar/rate_0.10/rep_0": true,
+    "mar/rate_0.10/rep_1": true,
+    "mar/rate_0.10/rep_2": true,
+    "mar/rate_0.10/rep_3": true,
+    "mar/rate_0.10/rep_4": true,
+    "mar/rate_0.30/rep_0": true,
+    "mar/rate_0.30/rep_1": true,
+    "mar/rate_0.30/rep_2": true,
+    "mar/rate_0.30/rep_3": true,
+    "mar/rate_0.30/rep_4": true
+  }
+}

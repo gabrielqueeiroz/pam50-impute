@@ -1,0 +1,9 @@
+cohort,missing_rate,best_imputer_by_rmse,best_imputer_by_f1,same_winner,rank_spearman_rmse_vs_f1
+discovery,0.05,"KNN(k=5,dist)","KNN(k=5,dist)",True,0.39999999999999997
+discovery,0.1,"KNN(k=5,dist)","KNN(k=5,dist)",True,0.49999999999999994
+discovery,0.2,"KNN(k=5,dist)","KNN(k=5,dist)",True,0.8999999999999998
+discovery,0.3,"KNN(k=5,dist)","KNN(k=5,dist)",True,0.9999999999999999
+metabric,0.05,RFECA_SVR(k=20),RFECA_SVR(k=20),True,0.9999999999999999
+metabric,0.1,RFECA_SVR(k=20),RFECA_SVR(k=20),True,0.8999999999999998
+metabric,0.2,RFECA_SVR(k=10),RFECA_SVR(k=20),False,0.7999999999999999
+metabric,0.3,RFECA_SVR(k=10),RFECA_SVR(k=10),True,0.7

@@ -1,0 +1,766 @@
+{
+  "run_id": "20260719_213142",
+  "started_at_utc": "2026-07-19T21:31:42.355540+00:00",
+  "status": "PASS",
+  "technically_ready_for_full_benchmark": true,
+  "assertions": {
+    "mask_feature_only": "PASS",
+    "complete_matrix_not_mutated": "PASS",
+    "shared_masks_across_imputers": "PASS",
+    "metrics_on_masked_cells_only": "PASS",
+    "train_val_no_overlap": "PASS",
+    "no_shared_imputer_or_scaler_or_corr_across_folds": "PASS",
+    "rfeca_training_fold_correlation_only": "PASS",
+    "loader_schema_parity_with_metabric": "PASS"
+  },
+  "warnings": [],
+  "errors": [],
+  "cohort": {
+    "name": "discovery",
+    "n_samples": 117,
+    "n_features": 50,
+    "class_distribution": {
+      "LumA": 57,
+      "Basal": 29,
+      "LumB": 17,
+      "Her2": 14
+    },
+    "metadata": {
+      "source_path": "<repo-root>\\data\\processed\\discovery\\discovery_pam50_4class.csv",
+      "has_native_sample_id_column": true,
+      "cohort_key": "discovery",
+      "matrix_schema": "sample_id + PAM50_genes + PAM50",
+      "inventory": {
+        "cohort_key": "discovery",
+        "provenance": {
+          "confidence": "Moderate",
+          "hypotheses": [
+            {
+              "label": "CPTAC_prospective_minus_normal_like",
+              "support": "circumstantial_class_counts",
+              "status": "unconfirmed"
+            },
+            {
+              "label": "METABRIC_subset",
+              "support": "historical_drive_folder_name_only",
+              "status": "unlikely_unconfirmed"
+            }
+          ],
+          "id_recovery_search": {
+            "searched_paths": [
+              "<repo-root>\\archive\\database\\df_MI_no_missing.csv",
+              "<repo-root>\\archive\\legacy_root\\correlation_table_pam50_full.csv",
+              "<repo-root>\\archive\\legacy_root\\df_MI_no_missing.csv",
+              "<repo-root>\\data\\raw\\discovery\\df_MI_no_missing.csv",
+              "<repo-root>\\data\\processed\\discovery\\df_MI_no_missing.csv",
+              "<repo-root>\\data\\processed\\discovery\\discovery_excluded_samples.csv",
+              "<repo-root>\\data\\processed\\discovery\\discovery_fingerprint.json",
+              "<repo-root>\\data\\processed\\discovery\\discovery_inventory.json",
+              "<repo-root>\\data\\processed\\discovery\\discovery_pam50_4class.csv",
+              "<repo-root>\\data\\processed\\discovery\\discovery_preparation_log.txt"
+            ],
+            "biological_ids_found": false,
+            "evidence": [],
+            "other_cohort_hits_ignored": [],
+            "conclusion": "No biological sample IDs recovered from local notebooks/CSVs/archives for the discovery matrix. Available source uses a reset integer index (0..n-1). Other-cohort IDs (e.g. METABRIC MB-*) were ignored.",
+            "patterns_checked_sample": [
+              {
+                "path": "<repo-root>\\archive\\database\\df_MI_no_missing.csv",
+                "columns": [
+                  "Unnamed: 0",
+                  "ACTR3B",
+                  "ANLN",
+                  "BAG1",
+                  "BCL2",
+                  "BIRC5",
+                  "BLVRA",
+                  "CCNB1",
+                  "CCNE1",
+                  "CDC20",
+                  "CDC6",
+                  "NUF2"
+                ],
+                "index_sample": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4"
+                ]
+              },
+              {
+                "path": "<repo-root>\\archive\\legacy_root\\correlation_table_pam50_full.csv",
+                "columns": [
+                  "Unnamed: 0",
+                  "ACTR3B",
+                  "ANLN",
+                  "BAG1",
+                  "BCL2",
+                  "BIRC5",
+                  "BLVRA",
+                  "CCNB1",
+                  "CCNE1",
+                  "CDC20",
+                  "CDC6",
+                  "NUF2"
+                ],
+                "index_sample": [
+                  "ACTR3B",
+                  "ANLN",
+                  "BAG1",
+                  "BCL2",
+                  "BIRC5"
+                ]
+              },
+              {
+                "path": "<repo-root>\\archive\\legacy_root\\df_MI_no_missing.csv",
+                "columns": [
+                  "Unnamed: 0",
+                  "ACTR3B",
+                  "ANLN",
+                  "BAG1",
+                  "BCL2",
+                  "BIRC5",
+                  "BLVRA",
+                  "CCNB1",
+                  "CCNE1",
+                  "CDC20",
+                  "CDC6",
+                  "NUF2"
+                ],
+                "index_sample": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4"
+                ]
+              },
+              {
+                "path": "<repo-root>\\data\\raw\\discovery\\df_MI_no_missing.csv",
+                "columns": [
+                  "Unnamed: 0",
+                  "ACTR3B",
+                  "ANLN",
+                  "BAG1",
+                  "BCL2",
+                  "BIRC5",
+                  "BLVRA",
+                  "CCNB1",
+                  "CCNE1",
+                  "CDC20",
+                  "CDC6",
+                  "NUF2"
+                ],
+                "index_sample": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4"
+                ]
+              },
+              {
+                "path": "<repo-root>\\data\\processed\\discovery\\df_MI_no_missing.csv",
+                "columns": [
+                  "Unnamed: 0",
+                  "ACTR3B",
+                  "ANLN",
+                  "BAG1",
+                  "BCL2",
+                  "BIRC5",
+                  "BLVRA",
+                  "CCNB1",
+                  "CCNE1",
+                  "CDC20",
+                  "CDC6",
+                  "NUF2"
+                ],
+                "index_sample": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4"
+                ]
+              },
+              {
+                "path": "<repo-root>\\data\\processed\\discovery\\discovery_excluded_samples.csv",
+                "error": "No columns to parse from file"
+              },
+              {
+                "path": "<repo-root>\\data\\processed\\discovery\\discovery_pam50_4class.csv",
+                "columns": [
+                  "sample_id",
+                  "ACTR3B",
+                  "ANLN",
+                  "BAG1",
+                  "BCL2",
+                  "BIRC5",
+                  "BLVRA",
+                  "CCNB1",
+                  "CCNE1",
+                  "CDC20",
+                  "CDC6",
+                  "NUF2"
+                ],
+                "index_sample": [
+                  "discovery_row_0001",
+                  "discovery_row_0002",
+                  "discovery_row_0003",
+                  "discovery_row_0004",
+                  "discovery_row_0005"
+                ]
+              }
+            ]
+          }
+        },
+        "expression_profile_documentation": {
+          "raw_matrix": {
+            "path": "<repo-root>\\data\\raw\\discovery\\df_MI_no_missing.csv",
+            "sha256": "21674b6bc19c0b44417729169cb16189e890129ee02cc87df16aa498f4b45ac6",
+            "bytes": 45554,
+            "immutable_policy": "Do not modify files under data/raw/discovery/."
+          }
+        },
+        "sample_ids": {
+          "status": "synthetic_row_ids",
+          "biological_ids_available": false,
+          "scheme": "discovery_row_XXXX (1-based synthetic)"
+        },
+        "final_matrix": {
+          "path": "<repo-root>\\data\\processed\\discovery\\discovery_pam50_4class.csv",
+          "schema": [
+            "sample_id",
+            "ACTR3B",
+            "ANLN",
+            "BAG1",
+            "BCL2",
+            "BIRC5",
+            "BLVRA",
+            "CCNB1",
+            "CCNE1",
+            "CDC20",
+            "CDC6",
+            "NUF2",
+            "CDH3",
+            "CENPF",
+            "CEP55",
+            "CXXC5",
+            "EGFR",
+            "ERBB2",
+            "ESR1",
+            "EXO1",
+            "FGFR4",
+            "FOXA1",
+            "FOXC1",
+            "GPR160",
+            "GRB7",
+            "KIF2C",
+            "NDC80",
+            "KRT14",
+            "KRT17",
+            "KRT5",
+            "MAPT",
+            "MDM2",
+            "MELK",
+            "MIA",
+            "MKI67",
+            "MLPH",
+            "MMP11",
+            "MYBL2",
+            "MYC",
+            "NAT1",
+            "ORC6",
+            "PGR",
+            "PHGDH",
+            "PTTG1",
+            "RRM2",
+            "SFRP1",
+            "SLC39A6",
+            "TMEM45B",
+            "TYMS",
+            "UBE2C",
+            "UBE2T",
+            "PAM50"
+          ],
+          "fingerprint": {
+            "n_samples": 117,
+            "n_genes": 50,
+            "genes": [
+              "ACTR3B",
+              "ANLN",
+              "BAG1",
+              "BCL2",
+              "BIRC5",
+              "BLVRA",
+              "CCNB1",
+              "CCNE1",
+              "CDC20",
+              "CDC6",
+              "NUF2",
+              "CDH3",
+              "CENPF",
+              "CEP55",
+              "CXXC5",
+              "EGFR",
+              "ERBB2",
+              "ESR1",
+              "EXO1",
+              "FGFR4",
+              "FOXA1",
+              "FOXC1",
+              "GPR160",
+              "GRB7",
+              "KIF2C",
+              "NDC80",
+              "KRT14",
+              "KRT17",
+              "KRT5",
+              "MAPT",
+              "MDM2",
+              "MELK",
+              "MIA",
+              "MKI67",
+              "MLPH",
+              "MMP11",
+              "MYBL2",
+              "MYC",
+              "NAT1",
+              "ORC6",
+              "PGR",
+              "PHGDH",
+              "PTTG1",
+              "RRM2",
+              "SFRP1",
+              "SLC39A6",
+              "TMEM45B",
+              "TYMS",
+              "UBE2C",
+              "UBE2T"
+            ],
+            "class_distribution": {
+              "LumA": 57,
+              "Basal": 29,
+              "LumB": 17,
+              "Her2": 14
+            },
+            "values_and_labels_sha256": "9994c4ed68d2c3c299aeb2a4d609c8edc091768b46d2dca77ce3f5c669838bea",
+            "full_matrix_sha256": "2be2fe709e637e206ba7d6a3e9a58b60085574d12682a30e4a6173c74444dee5",
+            "expression_summary": {
+              "min": -13.8318,
+              "max": 13.203,
+              "mean": -0.07016080341880343,
+              "std": 2.834966746199378,
+              "median": 0.029699999999999997
+            }
+          }
+        },
+        "scientific_name_policy": "Refer to this cohort as the discovery/laboratory cohort. Do not label as CPTAC unless provenance is confirmed."
+      },
+      "cohort_name": "discovery",
+      "n_samples": 117,
+      "n_genes": 50,
+      "gene_order": [
+        "ACTR3B",
+        "ANLN",
+        "BAG1",
+        "BCL2",
+        "BIRC5",
+        "BLVRA",
+        "CCNB1",
+        "CCNE1",
+        "CDC20",
+        "CDC6",
+        "NUF2",
+        "CDH3",
+        "CENPF",
+        "CEP55",
+        "CXXC5",
+        "EGFR",
+        "ERBB2",
+        "ESR1",
+        "EXO1",
+        "FGFR4",
+        "FOXA1",
+        "FOXC1",
+        "GPR160",
+        "GRB7",
+        "KIF2C",
+        "NDC80",
+        "KRT14",
+        "KRT17",
+        "KRT5",
+        "MAPT",
+        "MDM2",
+        "MELK",
+        "MIA",
+        "MKI67",
+        "MLPH",
+        "MMP11",
+        "MYBL2",
+        "MYC",
+        "NAT1",
+        "ORC6",
+        "PGR",
+        "PHGDH",
+        "PTTG1",
+        "RRM2",
+        "SFRP1",
+        "SLC39A6",
+        "TMEM45B",
+        "TYMS",
+        "UBE2C",
+        "UBE2T"
+      ],
+      "label_name": "PAM50",
+      "class_distribution": {
+        "LumA": 57,
+        "Basal": 29,
+        "LumB": 17,
+        "Her2": 14
+      },
+      "project_root": "<repo-root>",
+      "sample_id_status": {
+        "status": "synthetic_row_ids",
+        "biological_ids_available": false,
+        "scheme": "discovery_row_XXXX (1-based synthetic)"
+      }
+    },
+    "schema_fields": {
+      "discovery": [
+        "class_distribution",
+        "cohort_key",
+        "cohort_name",
+        "gene_order",
+        "has_native_sample_id_column",
+        "inventory",
+        "label_name",
+        "matrix_schema",
+        "n_genes",
+        "n_samples",
+        "project_root",
+        "sample_id_status",
+        "source_path"
+      ],
+      "metabric": [
+        "class_distribution",
+        "cohort_key",
+        "cohort_name",
+        "gene_order",
+        "has_native_sample_id_column",
+        "inventory",
+        "label_name",
+        "matrix_schema",
+        "n_genes",
+        "n_samples",
+        "project_root",
+        "sample_id_status",
+        "source_path"
+      ]
+    },
+    "metabric_loader_ok": true,
+    "metabric_n": 1608
+  },
+  "preparation_fingerprint": {
+    "n_samples": 117,
+    "n_genes": 50,
+    "genes": [
+      "ACTR3B",
+      "ANLN",
+      "BAG1",
+      "BCL2",
+      "BIRC5",
+      "BLVRA",
+      "CCNB1",
+      "CCNE1",
+      "CDC20",
+      "CDC6",
+      "NUF2",
+      "CDH3",
+      "CENPF",
+      "CEP55",
+      "CXXC5",
+      "EGFR",
+      "ERBB2",
+      "ESR1",
+      "EXO1",
+      "FGFR4",
+      "FOXA1",
+      "FOXC1",
+      "GPR160",
+      "GRB7",
+      "KIF2C",
+      "NDC80",
+      "KRT14",
+      "KRT17",
+      "KRT5",
+      "MAPT",
+      "MDM2",
+      "MELK",
+      "MIA",
+      "MKI67",
+      "MLPH",
+      "MMP11",
+      "MYBL2",
+      "MYC",
+      "NAT1",
+      "ORC6",
+      "PGR",
+      "PHGDH",
+      "PTTG1",
+      "RRM2",
+      "SFRP1",
+      "SLC39A6",
+      "TMEM45B",
+      "TYMS",
+      "UBE2C",
+      "UBE2T"
+    ],
+    "class_distribution": {
+      "LumA": 57,
+      "Basal": 29,
+      "LumB": 17,
+      "Her2": 14
+    },
+    "values_and_labels_sha256": "9994c4ed68d2c3c299aeb2a4d609c8edc091768b46d2dca77ce3f5c669838bea",
+    "full_matrix_sha256": "2be2fe709e637e206ba7d6a3e9a58b60085574d12682a30e4a6173c74444dee5",
+    "expression_summary": {
+      "min": -13.8318,
+      "max": 13.203,
+      "mean": -0.07016080341880343,
+      "std": 2.834966746199378,
+      "median": 0.029699999999999997
+    }
+  },
+  "shared_mask_checklist": [
+    {
+      "missing_rate": 0.1,
+      "replicate": 0,
+      "seed": 1052,
+      "mask_sum": 559,
+      "mask_shape": [
+        117,
+        50
+      ],
+      "shared_across_imputers": [
+        "SimpleMean",
+        "KNN(k=5,dist)",
+        "RFECA_SVR(k=5)"
+      ],
+      "note": "Same MissingnessResult instance is passed to every imputer."
+    },
+    {
+      "missing_rate": 0.1,
+      "replicate": 1,
+      "seed": 1053,
+      "mask_sum": 575,
+      "mask_shape": [
+        117,
+        50
+      ],
+      "shared_across_imputers": [
+        "SimpleMean",
+        "KNN(k=5,dist)",
+        "RFECA_SVR(k=5)"
+      ],
+      "note": "Same MissingnessResult instance is passed to every imputer."
+    }
+  ],
+  "finished_at_utc": "2026-07-19T21:31:59.880353+00:00",
+  "output_dir": "<repo-root>\\artifacts\\discovery_smoke_20260719_213142",
+  "config": {
+    "cohort_name": "discovery",
+    "missing_rates": [
+      0.1
+    ],
+    "n_repetitions": 2,
+    "n_splits": 3,
+    "random_state": 42,
+    "primary_classifier": "EnsembleSoft",
+    "imputers": [
+      "SimpleMean",
+      "KNN(k=5,dist)",
+      "RFECA_SVR(k=5)"
+    ],
+    "rfeca_top_k": 5,
+    "rfeca_use_abs_corr": true,
+    "rfeca_kernel": "linear",
+    "rfeca_C": 1.0,
+    "rfeca_epsilon": 0.1,
+    "rfeca_min_train_samples": 10,
+    "allow_precomputed_correlation": false,
+    "n_jobs": 1,
+    "tag": "smoke",
+    "seeds": {
+      "base_random_state": 42,
+      "cv_random_state": 42,
+      "missingness_seeds": [
+        {
+          "missing_rate": 0.1,
+          "replicate": 0,
+          "seed": 1052
+        },
+        {
+          "missing_rate": 0.1,
+          "replicate": 1,
+          "seed": 1053
+        }
+      ]
+    }
+  },
+  "timings_seconds": {
+    "imputation_rate0.1_rep0": 0.5950984000082826,
+    "classification_rate0.1_rep0": 7.948873799992725,
+    "imputation_rate0.1_rep1": 0.6011653000023216,
+    "classification_rate0.1_rep1": 8.313466700012214,
+    "wall_clock_seconds": 17.495812299996032
+  },
+  "imputation_summary": [
+    {
+      "imputer": "KNN(k=5,dist)",
+      "missing_rate": 0.1,
+      "rmse_mean": 2.1443744146257204,
+      "rmse_std": 0.16656836324099958,
+      "mae_mean": 1.4511710450194408,
+      "mae_std": 0.09751661959205449,
+      "n_rows": 6,
+      "n_masked_total": 1134
+    },
+    {
+      "imputer": "RFECA_SVR(k=5)",
+      "missing_rate": 0.1,
+      "rmse_mean": 2.1831928863273293,
+      "rmse_std": 0.17645548398652797,
+      "mae_mean": 1.431056249378843,
+      "mae_std": 0.11149152916618772,
+      "n_rows": 6,
+      "n_masked_total": 1134
+    },
+    {
+      "imputer": "SimpleMean",
+      "missing_rate": 0.1,
+      "rmse_mean": 2.956182717063538,
+      "rmse_std": 0.10588774477075948,
+      "mae_mean": 2.1530020739228077,
+      "mae_std": 0.09122420382673822,
+      "n_rows": 6,
+      "n_masked_total": 1134
+    }
+  ],
+  "classification_summary": [
+    {
+      "imputer": "KNN(k=5,dist)",
+      "missing_rate": 0.1,
+      "model": "EnsembleSoft",
+      "f1_mean": 0.9366172674019273,
+      "f1_std": 0.04625311295288336,
+      "bal_mean": 0.9166666666666666,
+      "bal_std": 0.06236095644623237,
+      "n_rows": 6
+    },
+    {
+      "imputer": "RFECA_SVR(k=5)",
+      "missing_rate": 0.1,
+      "model": "EnsembleSoft",
+      "f1_mean": 0.9262177723265657,
+      "f1_std": 0.026866792103753288,
+      "bal_mean": 0.9020833333333332,
+      "bal_std": 0.03533077820950017,
+      "n_rows": 6
+    },
+    {
+      "imputer": "SimpleMean",
+      "missing_rate": 0.1,
+      "model": "EnsembleSoft",
+      "f1_mean": 0.9480353066441,
+      "f1_std": 0.04128366157265527,
+      "bal_mean": 0.9270833333333334,
+      "bal_std": 0.058079806205676085,
+      "n_rows": 6
+    }
+  ],
+  "historical_reference": {
+    "available": true,
+    "path": "<repo-root>\\archive\\colab_experiments\\experimento 2 - k5 com scaler\\exp2_classification_summary.csv",
+    "protocol_notes": [
+      "Historical run: n_reps=10, n_splits=5 (smoke uses 2 reps / 3 splits).",
+      "Historical RFECA used precomputed full-cohort correlation CSV (leakage).",
+      "Corrected pipeline recomputes correlations inside each training fold.",
+      "Therefore exact numeric parity is NOT expected; deviations are informative."
+    ],
+    "RFECA_SVR(k=5)": {
+      "f1_mean": 0.9194553736118953,
+      "f1_std": 0.01936638022850861,
+      "bal_mean": 0.908219696969697,
+      "bal_std": 0.022853221438772702,
+      "n": 10,
+      "source": "<repo-root>\\archive\\legacy_root\\exp2_classification_raw_all.csv"
+    },
+    "KNN(k=5,dist)": {
+      "f1_mean": 0.9225853786310309,
+      "f1_std": 0.01752926056353535,
+      "bal_mean": 0.9140151515151513,
+      "bal_std": 0.016421909583726437,
+      "n": 10,
+      "source": "<repo-root>\\archive\\legacy_root\\exp2_classification_raw_all.csv"
+    },
+    "SimpleMean": {
+      "f1_mean": 0.9258779104953018,
+      "f1_std": 0.019478329955523357,
+      "bal_mean": 0.9152651515151515,
+      "bal_std": 0.022123035359115275,
+      "n": 10,
+      "source": "<repo-root>\\archive\\legacy_root\\exp2_classification_raw_all.csv"
+    }
+  },
+  "metric_parity": [
+    {
+      "imputer": "KNN(k=5,dist)",
+      "smoke_f1_mean": 0.9366172674019273,
+      "smoke_bal_mean": 0.9166666666666666,
+      "historical_available": true,
+      "historical_f1_mean": 0.9225853786310309,
+      "historical_bal_mean": 0.9140151515151513,
+      "delta_f1": 0.01403188877089645,
+      "delta_bal": 0.0026515151515152935,
+      "deviation_cause": "Different CV budget (smoke 2x3 vs historical 10x5) and/or RFECA correlation leakage fix (training-fold only)."
+    },
+    {
+      "imputer": "RFECA_SVR(k=5)",
+      "smoke_f1_mean": 0.9262177723265657,
+      "smoke_bal_mean": 0.9020833333333332,
+      "historical_available": true,
+      "historical_f1_mean": 0.9194553736118953,
+      "historical_bal_mean": 0.908219696969697,
+      "delta_f1": 0.006762398714670326,
+      "delta_bal": -0.0061363636363637175,
+      "deviation_cause": "Different CV budget (smoke 2x3 vs historical 10x5) and/or RFECA correlation leakage fix (training-fold only)."
+    },
+    {
+      "imputer": "SimpleMean",
+      "smoke_f1_mean": 0.9480353066441,
+      "smoke_bal_mean": 0.9270833333333334,
+      "historical_available": true,
+      "historical_f1_mean": 0.9258779104953018,
+      "historical_bal_mean": 0.9152651515151515,
+      "delta_f1": 0.022157396148798192,
+      "delta_bal": 0.011818181818181839,
+      "deviation_cause": "Different CV budget (smoke 2x3 vs historical 10x5) and/or RFECA correlation leakage fix (training-fold only)."
+    }
+  ],
+  "n_warnings": 0,
+  "degenerate_imputation_folds": 0,
+  "degenerate_classification_folds": 0,
+  "sample_id_status": {
+    "status": "synthetic_row_ids",
+    "biological_ids_available": false,
+    "scheme": "discovery_row_XXXX (1-based synthetic)"
+  },
+  "provenance_confidence": "Moderate",
+  "readiness_notes": [
+    "Discovery cohort integrated into generic load_cohort('discovery').",
+    "Smoke protocol matched METABRIC smoke (rate=0.10, reps=2, folds=3).",
+    "Full discovery benchmark not started."
+  ]
+}

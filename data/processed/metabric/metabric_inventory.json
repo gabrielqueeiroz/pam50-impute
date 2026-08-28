@@ -1,0 +1,217 @@
+{
+  "generated_at_utc": "2026-07-19T20:58:17.762253+00:00",
+  "study": {
+    "type_of_cancer": "brca",
+    "cancer_study_identifier": "brca_metabric",
+    "name": "Breast Cancer (METABRIC, Nature 2012 & Nat Commun 2016)",
+    "short_name": "Breast (METABRIC 2016)",
+    "description": "Targeted sequencing of 2509 primary breast tumors with 548 matched normals.",
+    "citation": "Pereira et al. Nat Commun 2016, Rueda et al. Nature 2019, Curtis et al. Nature 2012",
+    "pmid": "27161491,30867590,22522925"
+  },
+  "source_raw_dir": "<repo-root>\\data\\raw\\metabric",
+  "source_files": {
+    "expression": {
+      "path": "<repo-root>\\data\\raw\\metabric\\data_mrna_illumina_microarray.txt",
+      "sha256": "4470069455a4ed38ffed5d12513e468bbf5b9a57d66fa1162e7bd9a64889ab7a",
+      "bytes": 689254846
+    },
+    "clinical_patient": {
+      "path": "<repo-root>\\data\\raw\\metabric\\data_clinical_patient.txt",
+      "sha256": "2a6bbadc6e4b2b07c0505559d438da959fc5c9aba55c7194abc394e2d6454995",
+      "bytes": 408387
+    },
+    "clinical_sample": {
+      "path": "<repo-root>\\data\\raw\\metabric\\data_clinical_sample.txt",
+      "sha256": "9a2291e065e2a0a5337b4eaeb09836e70b1bc3e1ed17714a013b53515697e6dc",
+      "bytes": 299020
+    }
+  },
+  "discovered_expression_profiles": [
+    {
+      "meta_file": "meta_mrna_illumina_microarray.txt",
+      "data_filename": "data_mrna_illumina_microarray.txt",
+      "data_path": "<repo-root>\\data\\raw\\metabric\\data_mrna_illumina_microarray.txt",
+      "data_exists": true,
+      "genetic_alteration_type": "MRNA_EXPRESSION",
+      "datatype": "CONTINUOUS",
+      "stable_id": "mrna",
+      "profile_name": "mRNA expression (Illumina HT-12 v3 microarray)",
+      "profile_description": "Expression log2 intensity levels (Illumina HT-12 v3 microarray)",
+      "cancer_study_identifier": "brca_metabric",
+      "show_profile_in_analysis_tab": "false"
+    },
+    {
+      "meta_file": "meta_mrna_illumina_microarray_zscores_ref_diploid_samples.txt",
+      "data_filename": "data_mrna_illumina_microarray_zscores_ref_diploid_samples.txt",
+      "data_path": "<repo-root>\\data\\raw\\metabric\\data_mrna_illumina_microarray_zscores_ref_diploid_samples.txt",
+      "data_exists": false,
+      "genetic_alteration_type": "MRNA_EXPRESSION",
+      "datatype": "Z-SCORE",
+      "stable_id": "mrna_median_all_sample_Zscores",
+      "profile_name": "mRNA expression z-scores relative to all samples (log microarray)",
+      "profile_description": "Log2-transformed mRNA z-Scores compared to the expression distribution of all samples (Illumina HT-12 v3 microarray)",
+      "cancer_study_identifier": "brca_metabric",
+      "show_profile_in_analysis_tab": "true"
+    }
+  ],
+  "selected_expression_profile": {
+    "meta_file": "meta_mrna_illumina_microarray.txt",
+    "data_filename": "data_mrna_illumina_microarray.txt",
+    "data_exists": true,
+    "genetic_alteration_type": "MRNA_EXPRESSION",
+    "datatype": "CONTINUOUS",
+    "stable_id": "mrna",
+    "profile_name": "mRNA expression (Illumina HT-12 v3 microarray)",
+    "profile_description": "Expression log2 intensity levels (Illumina HT-12 v3 microarray)",
+    "cancer_study_identifier": "brca_metabric",
+    "show_profile_in_analysis_tab": "false"
+  },
+  "expression_profile_documentation": {
+    "datatype": "CONTINUOUS",
+    "platform_or_profile_name": "mRNA expression (Illumina HT-12 v3 microarray)",
+    "profile_description": "Expression log2 intensity levels (Illumina HT-12 v3 microarray)",
+    "genetic_alteration_type": "MRNA_EXPRESSION",
+    "stable_id": "mrna",
+    "normalization_or_transformation_as_declared": "Expression log2 intensity levels (Illumina HT-12 v3 microarray)",
+    "note": "Do not describe this matrix as 'raw'. Source metadata declares datatype='CONTINUOUS' and profile_description='Expression log2 intensity levels (Illumina HT-12 v3 microarray)'."
+  },
+  "subtype_field_selection": {
+    "source_table": "patient",
+    "column_name": "CLAUDIN_SUBTYPE",
+    "interpretation": "CLAUDIN_SUBTYPE corresponds to cBioPortal display name 'Pam50 + Claudin-low subtype'. It is NOT assumed to be pure PAM50. Benchmark filtering retains LumA/LumB/Her2/Basal only.",
+    "target_subtypes": [
+      "LumA",
+      "LumB",
+      "Her2",
+      "Basal"
+    ],
+    "excluded_labels_policy": [
+      "Normal",
+      "claudin-low",
+      "NC"
+    ]
+  },
+  "gene_mapping": {
+    "n_target_genes": 50,
+    "primary_key": "Entrez_Gene_Id",
+    "alias_fallback": {
+      "NUF2": [
+        "CDCA1"
+      ],
+      "NDC80": [
+        "KNTC2"
+      ],
+      "ORC6": [
+        "ORC6L"
+      ]
+    },
+    "probe_selection_rule": "Among rows mapping to the same target gene, select the probe/row with the highest variance across all expression samples (unsupervised, deterministic; ties broken by smaller Entrez_Gene_Id then lexicographic Hugo_Symbol).",
+    "n_entrez_matches": 50,
+    "n_alias_fallbacks": 0,
+    "n_multi_probe_genes": 1,
+    "alias_fallback_rows": [],
+    "multi_probe_genes": [
+      {
+        "target_gene": "BIRC5",
+        "n_candidate_probes": 2,
+        "selected_probe_id": "row:3394|Hugo:BIRC5|Entrez:332",
+        "selected_variance": 0.9405220780103493
+      }
+    ]
+  },
+  "filtering": {
+    "n_expression_samples_initial": 1980,
+    "n_excluded": 372,
+    "exclusion_reason_counts": {
+      "subtype_not_in_4class:claudin-low": 218,
+      "subtype_not_in_4class:Normal": 148,
+      "subtype_not_in_4class:NC": 6
+    },
+    "n_final_samples": 1608,
+    "class_distribution_final": {
+      "LumA": 700,
+      "LumB": 475,
+      "Her2": 224,
+      "Basal": 209
+    }
+  },
+  "final_matrix": {
+    "path": "<repo-root>\\data\\processed\\metabric\\metabric_pam50_4class.csv",
+    "n_samples": 1608,
+    "n_genes": 50,
+    "genes": [
+      "ACTR3B",
+      "ANLN",
+      "BAG1",
+      "BCL2",
+      "BIRC5",
+      "BLVRA",
+      "CCNB1",
+      "CCNE1",
+      "CDC20",
+      "CDC6",
+      "NUF2",
+      "CDH3",
+      "CENPF",
+      "CEP55",
+      "CXXC5",
+      "EGFR",
+      "ERBB2",
+      "ESR1",
+      "EXO1",
+      "FGFR4",
+      "FOXA1",
+      "FOXC1",
+      "GPR160",
+      "GRB7",
+      "KIF2C",
+      "NDC80",
+      "KRT14",
+      "KRT17",
+      "KRT5",
+      "MAPT",
+      "MDM2",
+      "MELK",
+      "MIA",
+      "MKI67",
+      "MLPH",
+      "MMP11",
+      "MYBL2",
+      "MYC",
+      "NAT1",
+      "ORC6",
+      "PGR",
+      "PHGDH",
+      "PTTG1",
+      "RRM2",
+      "SFRP1",
+      "SLC39A6",
+      "TMEM45B",
+      "TYMS",
+      "UBE2C",
+      "UBE2T"
+    ],
+    "sample_id_preserved": true,
+    "content_sha256": "055d91a01ba05ab2322a131c3cc3d7c98e2b6d50e965e7d8effedbe9f66ceaac",
+    "expression_value_summary": {
+      "n_values": 80400,
+      "min": 4.77809561621706,
+      "max": 14.6439001022249,
+      "mean": 7.757146689246489,
+      "std": 2.1113566835731747,
+      "median": 7.20021437680339,
+      "p01": 5.249451579417871,
+      "p99": 13.950793001331819
+    }
+  },
+  "artifacts": {
+    "metabric_inventory.json": "<repo-root>\\data\\processed\\metabric\\metabric_inventory.json",
+    "clinical_field_report.csv": "<repo-root>\\data\\processed\\metabric\\clinical_field_report.csv",
+    "gene_mapping_report.csv": "<repo-root>\\data\\processed\\metabric\\gene_mapping_report.csv",
+    "native_missingness_report.csv": "<repo-root>\\data\\processed\\metabric\\native_missingness_report.csv",
+    "metabric_pam50_4class.csv": "<repo-root>\\data\\processed\\metabric\\metabric_pam50_4class.csv",
+    "excluded_samples.csv": "<repo-root>\\data\\processed\\metabric\\excluded_samples.csv",
+    "preparation_log.txt": "<repo-root>\\data\\processed\\metabric\\preparation_log.txt"
+  }
+}

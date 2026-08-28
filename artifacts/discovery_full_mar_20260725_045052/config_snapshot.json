@@ -1,0 +1,292 @@
+{
+  "cohort_name": "discovery",
+  "missing_rates": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "n_repetitions": 10,
+  "n_splits": 5,
+  "random_state": 42,
+  "primary_classifier": "EnsembleSoft",
+  "imputers": [
+    "SimpleMean",
+    "KNN(k=5,dist)",
+    "RFECA_SVR(k=5)",
+    "RFECA_SVR(k=10)",
+    "RFECA_SVR(k=20)",
+    "MissForest"
+  ],
+  "rfeca_top_k": 5,
+  "rfeca_use_abs_corr": true,
+  "rfeca_kernel": "linear",
+  "rfeca_C": 1.0,
+  "rfeca_epsilon": 0.1,
+  "rfeca_min_train_samples": 10,
+  "missforest_n_estimators": 20,
+  "missforest_max_iter": 5,
+  "missforest_n_jobs": 4,
+  "allow_precomputed_correlation": false,
+  "n_jobs": 1,
+  "tag": "full_mar",
+  "target_cell_policy": "originally_observed_only",
+  "missingness_mechanism": "mar",
+  "seeds": {
+    "base_random_state": 42,
+    "cv_random_state": 42,
+    "missingness_seeds": [
+      {
+        "missing_rate": 0.0,
+        "replicate": 0,
+        "seed": 18042
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 1,
+        "seed": 18043
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 2,
+        "seed": 18044
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 3,
+        "seed": 18045
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 4,
+        "seed": 18046
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 5,
+        "seed": 18047
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 6,
+        "seed": 18048
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 7,
+        "seed": 18049
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 8,
+        "seed": 18050
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 9,
+        "seed": 18051
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 0,
+        "seed": 18047
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 1,
+        "seed": 18048
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 2,
+        "seed": 18049
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 3,
+        "seed": 18050
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 4,
+        "seed": 18051
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 5,
+        "seed": 18052
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 6,
+        "seed": 18053
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 7,
+        "seed": 18054
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 8,
+        "seed": 18055
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 9,
+        "seed": 18056
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 0,
+        "seed": 18052
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 1,
+        "seed": 18053
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 2,
+        "seed": 18054
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 3,
+        "seed": 18055
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 4,
+        "seed": 18056
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 5,
+        "seed": 18057
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 6,
+        "seed": 18058
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 7,
+        "seed": 18059
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 8,
+        "seed": 18060
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 9,
+        "seed": 18061
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 0,
+        "seed": 18062
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 1,
+        "seed": 18063
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 2,
+        "seed": 18064
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 3,
+        "seed": 18065
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 4,
+        "seed": 18066
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 5,
+        "seed": 18067
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 6,
+        "seed": 18068
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 7,
+        "seed": 18069
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 8,
+        "seed": 18070
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 9,
+        "seed": 18071
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 0,
+        "seed": 18072
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 1,
+        "seed": 18073
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 2,
+        "seed": 18074
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 3,
+        "seed": 18075
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 4,
+        "seed": 18076
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 5,
+        "seed": 18077
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 6,
+        "seed": 18078
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 7,
+        "seed": 18079
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 8,
+        "seed": 18080
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 9,
+        "seed": 18081
+      }
+    ]
+  }
+}

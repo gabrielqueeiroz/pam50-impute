@@ -1,0 +1,11 @@
+{
+  "recommended_performance_workers": 16,
+  "recommended_conservative_workers": 10,
+  "recommended_workers": 16,
+  "conservative_workers": 10,
+  "selection_basis": "extended_autotune",
+  "gain_vs_8_percent": 23.7,
+  "source": "parallel_benchmark_extended",
+  "previous_recommended_workers": 8,
+  "updated_at_utc": "2026-07-31T16:11:00+00:00"
+}

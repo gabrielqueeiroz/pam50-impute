@@ -1,0 +1,22 @@
+[2026-07-19T21:31:35Z] ROOT=<repo-root>
+[2026-07-19T21:31:35Z] Using existing immutable raw source: <repo-root>\data\raw\discovery\df_MI_no_missing.csv
+[2026-07-19T21:31:35Z] Raw source sha256=21674b6bc19c0b44417729169cb16189e890129ee02cc87df16aa498f4b45ac6
+[2026-07-19T21:31:35Z] No biological sample IDs recovered from local notebooks/CSVs/archives for the discovery matrix. Available source uses a reset integer index (0..n-1). Other-cohort IDs (e.g. METABRIC MB-*) were ignored.
+[2026-07-19T21:31:35Z] Loaded source matrix shape=(117, 51) from <repo-root>\data\raw\discovery\df_MI_no_missing.csv
+[2026-07-19T21:31:35Z] Original biological sample IDs unavailable; assigned synthetic IDs discovery_row_0001..
+[2026-07-19T21:31:35Z] Class distribution before filtering: {'LumA': 57, 'Basal': 29, 'LumB': 17, 'Her2': 14}
+[2026-07-19T21:31:35Z] Class distribution after filtering: {'LumA': 57, 'Basal': 29, 'LumB': 17, 'Her2': 14}
+[2026-07-19T21:31:35Z] Expression values match source exactly (max_abs_diff=0).
+[2026-07-19T21:31:35Z] All preparation assertions PASSED.
+[2026-07-19T21:31:35Z] Wrote <repo-root>\data\processed\discovery\discovery_pam50_4class.csv
+[2026-07-19T21:31:35Z] Determinism check (CSV round-trip) PASSED.
+[2026-07-19T21:31:35Z] Determinism check (repeated preparation) PASSED.
+[2026-07-19T21:31:35Z] Post-sort expression parity vs source PASSED (max_abs_diff=0).
+[2026-07-19T21:31:35Z] Wrote <repo-root>\data\processed\discovery\discovery_excluded_samples.csv (n=0)
+[2026-07-19T21:31:35Z] ========================================================================
+[2026-07-19T21:31:35Z] DISCOVERY PREPARATION COMPLETE
+[2026-07-19T21:31:35Z] n=117 class_distribution={'LumA': 57, 'Basal': 29, 'LumB': 17, 'Her2': 14}
+[2026-07-19T21:31:35Z] id_status=synthetic_row_ids
+[2026-07-19T21:31:35Z] provenance_confidence=Moderate
+[2026-07-19T21:31:35Z] values_and_labels_sha256=9994c4ed68d2c3c299aeb2a4d609c8edc091768b46d2dca77ce3f5c669838bea
+[2026-07-19T21:31:35Z] STOPPING after preparation (no benchmark).

@@ -1,0 +1,4 @@
+mechanism,missing_rate,replicate,seed,mask_hash,imputer,method,rmse,mae,n_masked,evaluation_protocol,seed_scheme,paired_with
+mar,0.2,1,1217045,66dcff0b9b3fd78b,SimpleMean,Mean,1.1488489682902616,0.8086595623094134,16080,repeated_mask_holdout,v2,OriginalRFECA_FREEZE
+mar,0.2,1,1217045,66dcff0b9b3fd78b,"KNN(k=5,dist)",KNN,0.7314950392998414,0.49743044214467497,16080,repeated_mask_holdout,v2,OriginalRFECA_FREEZE
+mar,0.2,1,1217045,66dcff0b9b3fd78b,MissForest,MissForest,0.6587445402837946,0.43622555379178035,16080,repeated_mask_holdout,v2,OriginalRFECA_FREEZE

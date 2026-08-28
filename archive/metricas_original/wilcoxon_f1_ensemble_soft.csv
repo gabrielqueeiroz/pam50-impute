@@ -1,0 +1,51 @@
+missing_rate,model,metric,method_a,method_b,p_value,n_pairs,note
+0.0,EnsembleSoft,f1_macro,"KNN(k=5,dist)",RFECA_SVR(k=10),1.0,10,Vetores idênticos
+0.0,EnsembleSoft,f1_macro,"KNN(k=5,dist)",RFECA_SVR(k=20),1.0,10,Vetores idênticos
+0.0,EnsembleSoft,f1_macro,"KNN(k=5,dist)",RFECA_SVR(k=5),1.0,10,Vetores idênticos
+0.0,EnsembleSoft,f1_macro,"KNN(k=5,dist)",SimpleMean,1.0,10,Vetores idênticos
+0.0,EnsembleSoft,f1_macro,RFECA_SVR(k=10),RFECA_SVR(k=20),1.0,10,Vetores idênticos
+0.0,EnsembleSoft,f1_macro,RFECA_SVR(k=10),RFECA_SVR(k=5),1.0,10,Vetores idênticos
+0.0,EnsembleSoft,f1_macro,RFECA_SVR(k=10),SimpleMean,1.0,10,Vetores idênticos
+0.0,EnsembleSoft,f1_macro,RFECA_SVR(k=20),RFECA_SVR(k=5),1.0,10,Vetores idênticos
+0.0,EnsembleSoft,f1_macro,RFECA_SVR(k=20),SimpleMean,1.0,10,Vetores idênticos
+0.0,EnsembleSoft,f1_macro,RFECA_SVR(k=5),SimpleMean,1.0,10,Vetores idênticos
+0.05,EnsembleSoft,f1_macro,RFECA_SVR(k=5),SimpleMean,0.3125,10,
+0.05,EnsembleSoft,f1_macro,RFECA_SVR(k=20),RFECA_SVR(k=5),0.42578125,10,
+0.05,EnsembleSoft,f1_macro,RFECA_SVR(k=10),RFECA_SVR(k=5),0.46875,10,
+0.05,EnsembleSoft,f1_macro,"KNN(k=5,dist)",SimpleMean,0.4921875,10,
+0.05,EnsembleSoft,f1_macro,RFECA_SVR(k=10),RFECA_SVR(k=20),0.5625,10,
+0.05,EnsembleSoft,f1_macro,"KNN(k=5,dist)",RFECA_SVR(k=10),0.5703125,10,
+0.05,EnsembleSoft,f1_macro,"KNN(k=5,dist)",RFECA_SVR(k=5),0.65234375,10,
+0.05,EnsembleSoft,f1_macro,"KNN(k=5,dist)",RFECA_SVR(k=20),0.734375,10,
+0.05,EnsembleSoft,f1_macro,RFECA_SVR(k=10),SimpleMean,0.8125,10,
+0.05,EnsembleSoft,f1_macro,RFECA_SVR(k=20),SimpleMean,1.0,10,
+0.1,EnsembleSoft,f1_macro,RFECA_SVR(k=20),SimpleMean,0.02734375,10,
+0.1,EnsembleSoft,f1_macro,RFECA_SVR(k=10),RFECA_SVR(k=20),0.10546875,10,
+0.1,EnsembleSoft,f1_macro,RFECA_SVR(k=20),RFECA_SVR(k=5),0.1640625,10,
+0.1,EnsembleSoft,f1_macro,"KNN(k=5,dist)",RFECA_SVR(k=20),0.30078125,10,
+0.1,EnsembleSoft,f1_macro,"KNN(k=5,dist)",SimpleMean,0.42578125,10,
+0.1,EnsembleSoft,f1_macro,RFECA_SVR(k=5),SimpleMean,0.42578125,10,
+0.1,EnsembleSoft,f1_macro,RFECA_SVR(k=10),RFECA_SVR(k=5),0.49609375,10,
+0.1,EnsembleSoft,f1_macro,RFECA_SVR(k=10),SimpleMean,0.625,10,
+0.1,EnsembleSoft,f1_macro,"KNN(k=5,dist)",RFECA_SVR(k=5),0.8203125,10,
+0.1,EnsembleSoft,f1_macro,"KNN(k=5,dist)",RFECA_SVR(k=10),1.0,10,
+0.2,EnsembleSoft,f1_macro,RFECA_SVR(k=20),RFECA_SVR(k=5),0.00390625,10,
+0.2,EnsembleSoft,f1_macro,"KNN(k=5,dist)",RFECA_SVR(k=20),0.009765625,10,
+0.2,EnsembleSoft,f1_macro,RFECA_SVR(k=20),SimpleMean,0.037109375,10,
+0.2,EnsembleSoft,f1_macro,RFECA_SVR(k=10),RFECA_SVR(k=20),0.048828125,10,
+0.2,EnsembleSoft,f1_macro,RFECA_SVR(k=10),RFECA_SVR(k=5),0.09765625,10,
+0.2,EnsembleSoft,f1_macro,"KNN(k=5,dist)",RFECA_SVR(k=10),0.193359375,10,
+0.2,EnsembleSoft,f1_macro,"KNN(k=5,dist)",SimpleMean,0.431640625,10,
+0.2,EnsembleSoft,f1_macro,RFECA_SVR(k=10),SimpleMean,0.6953125,10,
+0.2,EnsembleSoft,f1_macro,"KNN(k=5,dist)",RFECA_SVR(k=5),0.76953125,10,
+0.2,EnsembleSoft,f1_macro,RFECA_SVR(k=5),SimpleMean,0.76953125,10,
+0.3,EnsembleSoft,f1_macro,"KNN(k=5,dist)",RFECA_SVR(k=5),0.009765625,10,
+0.3,EnsembleSoft,f1_macro,RFECA_SVR(k=10),RFECA_SVR(k=20),0.0390625,10,
+0.3,EnsembleSoft,f1_macro,"KNN(k=5,dist)",RFECA_SVR(k=20),0.048828125,10,
+0.3,EnsembleSoft,f1_macro,RFECA_SVR(k=5),SimpleMean,0.10546875,10,
+0.3,EnsembleSoft,f1_macro,RFECA_SVR(k=20),SimpleMean,0.130859375,10,
+0.3,EnsembleSoft,f1_macro,"KNN(k=5,dist)",RFECA_SVR(k=10),0.232421875,10,
+0.3,EnsembleSoft,f1_macro,"KNN(k=5,dist)",SimpleMean,0.232421875,10,
+0.3,EnsembleSoft,f1_macro,RFECA_SVR(k=20),RFECA_SVR(k=5),0.375,10,
+0.3,EnsembleSoft,f1_macro,RFECA_SVR(k=10),RFECA_SVR(k=5),0.4921875,10,
+0.3,EnsembleSoft,f1_macro,RFECA_SVR(k=10),SimpleMean,0.625,10,

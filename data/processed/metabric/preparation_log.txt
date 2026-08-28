@@ -1,0 +1,44 @@
+[2026-07-19T20:58:10Z] ROOT=<repo-root>
+[2026-07-19T20:58:10Z] RAW_DIR=<repo-root>\data\raw\metabric
+[2026-07-19T20:58:10Z] OUT_DIR=<repo-root>\data\processed\metabric
+[2026-07-19T20:58:10Z] Discovered expression profile via meta_mrna_illumina_microarray.txt: datatype='CONTINUOUS', file=data_mrna_illumina_microarray.txt, exists=True
+[2026-07-19T20:58:10Z] Discovered expression profile via meta_mrna_illumina_microarray_zscores_ref_diploid_samples.txt: datatype='Z-SCORE', file=data_mrna_illumina_microarray_zscores_ref_diploid_samples.txt, exists=False
+[2026-07-19T20:58:10Z] Selected expression profile: data_mrna_illumina_microarray.txt | datatype='CONTINUOUS' | name='mRNA expression (Illumina HT-12 v3 microarray)'
+[2026-07-19T20:58:10Z] Loaded clinical patient n=2509, sample n=2509
+[2026-07-19T20:58:10Z] Clinical subtype candidate [patient.INTCLUST]: unique=11, missing=529
+[2026-07-19T20:58:10Z] Clinical subtype candidate [patient.CLAUDIN_SUBTYPE]: unique=7, missing=529
+[2026-07-19T20:58:10Z] Clinical subtype candidate [patient.THREEGENE]: unique=4, missing=745
+[2026-07-19T20:58:10Z] Clinical subtype candidate [patient.HISTOLOGICAL_SUBTYPE]: unique=8, missing=135
+[2026-07-19T20:58:10Z] Wrote <repo-root>\data\processed\metabric\clinical_field_report.csv
+[2026-07-19T20:58:10Z] Selected subtype field: patient.CLAUDIN_SUBTYPE (cBioPortal label: 'Pam50 + Claudin-low subtype'). This is NOT automatically treated as pure PAM50; 4-class filter keeps LumA/LumB/Her2/Basal and excludes claudin-low/Normal/NC.
+[2026-07-19T20:58:10Z] Loading expression matrix: <repo-root>\data\raw\metabric\data_mrna_illumina_microarray.txt (689254846 bytes)
+[2026-07-19T20:58:16Z] Expression shape: 20603 rows x 1980 samples (plus Hugo_Symbol, Entrez_Gene_Id)
+[2026-07-19T20:58:17Z] MULTI-PROBE BIRC5: 2 candidates; selected row:3394|Hugo:BIRC5|Entrez:332 var=0.940522
+[2026-07-19T20:58:17Z] Mapped expression matrix: 1980 samples x 50 genes
+[2026-07-19T20:58:17Z] Wrote <repo-root>\data\processed\metabric\gene_mapping_report.csv
+[2026-07-19T20:58:17Z] Samples with non-missing subtype after join: 1980/1980
+[2026-07-19T20:58:17Z] Native missingness summary: genes_with_any_NA=0, samples_with_any_NA=0, total_NA_cells=0
+[2026-07-19T20:58:17Z] Wrote <repo-root>\data\processed\metabric\native_missingness_report.csv
+[2026-07-19T20:58:17Z] Class distribution BEFORE any filtering: {'LumA': 700, 'LumB': 475, 'Her2': 224, 'claudin-low': 218, 'Basal': 209, 'Normal': 148, 'NC': 6}
+[2026-07-19T20:58:17Z] After dropping missing subtype: n=1980; counts={'LumA': 700, 'LumB': 475, 'Her2': 224, 'claudin-low': 218, 'Basal': 209, 'Normal': 148, 'NC': 6}
+[2026-07-19T20:58:17Z] Class distribution AFTER 4-class filter (before NA filter): n=1608; counts={'LumA': 700, 'LumB': 475, 'Her2': 224, 'Basal': 209}
+[2026-07-19T20:58:17Z] Class distribution AFTER dropping native-missing expression: n=1608; counts={'LumA': 700, 'LumB': 475, 'Her2': 224, 'Basal': 209}
+[2026-07-19T20:58:17Z] Wrote <repo-root>\data\processed\metabric\excluded_samples.csv
+[2026-07-19T20:58:17Z] All automated assertions PASSED.
+[2026-07-19T20:58:17Z] Deterministic content fingerprint (sha256): 055d91a01ba05ab2322a131c3cc3d7c98e2b6d50e965e7d8effedbe9f66ceaac
+[2026-07-19T20:58:17Z] Determinism check (in-memory rerun) PASSED.
+[2026-07-19T20:58:17Z] Wrote <repo-root>\data\processed\metabric\metabric_pam50_4class.csv
+[2026-07-19T20:58:17Z] Determinism check (CSV round-trip) PASSED.
+[2026-07-19T20:58:18Z] Wrote <repo-root>\data\processed\metabric\metabric_inventory.json
+[2026-07-19T20:58:18Z] ========================================================================
+[2026-07-19T20:58:18Z] PREPARATION COMPLETE — SUMMARY
+[2026-07-19T20:58:18Z] ========================================================================
+[2026-07-19T20:58:18Z] Final sample count: 1608
+[2026-07-19T20:58:18Z] Class distribution: {'LumA': 700, 'LumB': 475, 'Her2': 224, 'Basal': 209}
+[2026-07-19T20:58:18Z] Recovered genes (50): ACTR3B, ANLN, BAG1, BCL2, BIRC5, BLVRA, CCNB1, CCNE1, CDC20, CDC6, NUF2, CDH3, CENPF, CEP55, CXXC5, EGFR, ERBB2, ESR1, EXO1, FGFR4, FOXA1, FOXC1, GPR160, GRB7, KIF2C, NDC80, KRT14, KRT17, KRT5, MAPT, MDM2, MELK, MIA, MKI67, MLPH, MMP11, MYBL2, MYC, NAT1, ORC6, PGR, PHGDH, PTTG1, RRM2, SFRP1, SLC39A6, TMEM45B, TYMS, UBE2C, UBE2T
+[2026-07-19T20:58:18Z] Alias/symbol fallbacks used: none (all genes matched by Entrez ID)
+[2026-07-19T20:58:18Z] Multi-probe genes (selected by max variance): [{"target_gene": "BIRC5", "selected_hugo_symbol": "BIRC5", "selected_variance": 0.9405220780103493}]
+[2026-07-19T20:58:18Z] Excluded samples: 372; reasons={'subtype_not_in_4class:claudin-low': 218, 'subtype_not_in_4class:Normal': 148, 'subtype_not_in_4class:NC': 6}
+[2026-07-19T20:58:18Z] Expression-value summary: {"n_values": 80400, "min": 4.77809561621706, "max": 14.6439001022249, "mean": 7.757146689246489, "std": 2.1113566835731747, "median": 7.20021437680339, "p01": 5.249451579417871, "p99": 13.950793001331819}
+[2026-07-19T20:58:18Z] Selected expression profile documentation: datatype='CONTINUOUS'; profile_name='mRNA expression (Illumina HT-12 v3 microarray)'; profile_description='Expression log2 intensity levels (Illumina HT-12 v3 microarray)'
+[2026-07-19T20:58:18Z] STOPPING after preparation (no imputation/classification run).

@@ -1,0 +1,33 @@
+{
+  "method": "OriginalRFECA",
+  "cohort": "metabric",
+  "evaluation_protocol": "repeated_mask_holdout",
+  "input_protocol": "target_wise_complete_predictors",
+  "predictor_values": "original_complete_matrix",
+  "selection_protocol": "leakage_safe",
+  "max_candidates": 49,
+  "inner_cv": 5,
+  "use_scaler": false,
+  "gene_workers": 16,
+  "blas_threads": 1,
+  "seed_scheme": "v2",
+  "base_seed": 42,
+  "mechanisms": [
+    "mcar",
+    "mar"
+  ],
+  "rates": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "replicates": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_genes": 50
+}

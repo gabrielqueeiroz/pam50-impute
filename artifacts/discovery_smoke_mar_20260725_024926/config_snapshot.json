@@ -1,0 +1,46 @@
+{
+  "cohort_name": "discovery",
+  "missing_rates": [
+    0.1
+  ],
+  "n_repetitions": 2,
+  "n_splits": 3,
+  "random_state": 42,
+  "primary_classifier": "EnsembleSoft",
+  "imputers": [
+    "SimpleMean",
+    "KNN(k=5,dist)",
+    "RFECA_SVR(k=5)",
+    "MissForest"
+  ],
+  "rfeca_top_k": 5,
+  "rfeca_use_abs_corr": true,
+  "rfeca_kernel": "linear",
+  "rfeca_C": 1.0,
+  "rfeca_epsilon": 0.1,
+  "rfeca_min_train_samples": 10,
+  "missforest_n_estimators": 10,
+  "missforest_max_iter": 3,
+  "missforest_n_jobs": 4,
+  "allow_precomputed_correlation": false,
+  "n_jobs": 1,
+  "tag": "smoke_mar",
+  "target_cell_policy": "originally_observed_only",
+  "missingness_mechanism": "mar",
+  "seeds": {
+    "base_random_state": 42,
+    "cv_random_state": 42,
+    "missingness_seeds": [
+      {
+        "missing_rate": 0.1,
+        "replicate": 0,
+        "seed": 18052
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 1,
+        "seed": 18053
+      }
+    ]
+  }
+}

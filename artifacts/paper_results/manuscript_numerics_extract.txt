@@ -1,0 +1,247 @@
+METRICS: ['bal_acc', 'corr_frobenius_rel', 'corr_mae_offdiag', 'corr_rv', 'f1_macro', 'mae', 'precision_macro', 'recall_macro', 'rmse']
+
+=== 1. RECONSTRUCTION ===
+LOWEST RMSE: 0.617 (MissForest, MCAR, 5%)
+HIGHEST RMSE: 1.169 (Mean, MAR, 5%)
+
+MissForest vs Mean reduction % -- MCAR
+   5%: Mean=1.067 MF=0.617 reduction=42.1%
+  10%: Mean=1.063 MF=0.624 reduction=41.4%
+  20%: Mean=1.068 MF=0.637 reduction=40.3%
+  30%: Mean=1.069 MF=0.653 reduction=38.9%
+MissForest vs Mean reduction % -- MAR
+   5%: Mean=1.169 MF=0.629 reduction=46.2%
+  10%: Mean=1.160 MF=0.643 reduction=44.6%
+  20%: Mean=1.149 MF=0.672 reduction=41.5%
+  30%: Mean=1.143 MF=0.705 reduction=38.3%
+
+Largest consecutive RMSE increase: Delta=+0.1060 | MAR KNN 20%->30% (0.751->0.857)
+
+Rankings (best->worst RMSE):
+  MCAR  5%: MissForest < RFECA-k20 < RFECA-k10 < KNN < RFECA-k5 < Mean
+  MCAR 10%: MissForest < RFECA-k20 < RFECA-k10 < KNN < RFECA-k5 < Mean
+  MCAR 20%: MissForest < RFECA-k10 < RFECA-k20 < KNN < RFECA-k5 < Mean
+  MCAR 30%: MissForest < RFECA-k10 < KNN < RFECA-k20 < RFECA-k5 < Mean
+  MAR  5%: MissForest < KNN < RFECA-k20 < RFECA-k10 < RFECA-k5 < Mean
+  MAR 10%: MissForest < KNN < RFECA-k20 < RFECA-k10 < RFECA-k5 < Mean
+  MAR 20%: MissForest < KNN < RFECA-k10 < RFECA-k20 < RFECA-k5 < Mean
+  MAR 30%: MissForest < RFECA-k10 < RFECA-k20 < RFECA-k5 < KNN < Mean
+
+Friedman RMSE (reduced):
+  MAR 5%: chi2=27.12 p=5.56e-06
+  MAR 10%: chi2=28.92 p=2.33e-06
+  MAR 20%: chi2=28.92 p=2.33e-06
+  MAR 30%: chi2=30.00 p=1.38e-06
+  MCAR 5%: chi2=27.48 p=4.67e-06
+  MCAR 10%: chi2=28.08 p=3.49e-06
+  MCAR 20%: chi2=27.48 p=4.67e-06
+  MCAR 30%: chi2=28.08 p=3.49e-06
+
+Primary RMSE vs Mean -- all Holm sig? True
+rank-biserial r (all): [-1.0]
+MissForest vs Mean RMSE deltas + CI95:
+  MAR 5%: delta=-0.5398 [-0.5504, -0.5297] r=-1.00 p_Holm=0.0156
+  MAR 10%: delta=-0.5174 [-0.5226, -0.5124] r=-1.00 p_Holm=0.0156
+  MAR 20%: delta=-0.4770 [-0.4821, -0.4725] r=-1.00 p_Holm=0.0156
+  MAR 30%: delta=-0.4377 [-0.4415, -0.4335] r=-1.00 p_Holm=0.0156
+  MCAR 5%: delta=-0.4495 [-0.4603, -0.4378] r=-1.00 p_Holm=0.0156
+  MCAR 10%: delta=-0.4397 [-0.4499, -0.4302] r=-1.00 p_Holm=0.0156
+  MCAR 20%: delta=-0.4304 [-0.4350, -0.4257] r=-1.00 p_Holm=0.0156
+  MCAR 30%: delta=-0.4156 [-0.4189, -0.4118] r=-1.00 p_Holm=0.0156
+
+Mid-tier note: MCAR 20% RFECA-k10 slightly better than k20; MCAR 30% KNN beats RFECA-k20; MAR KNN often 2nd until 30% where KNN collapses.
+
+=== 2. STRUCTURE (RV) ===
+HIGHEST RV: 0.9995 (MissForest, MCAR, 5%)
+LOWEST RV: 0.9664 (Mean, MAR, 30%)
+
+MCAR:
+  MF RV 5%->30%: 0.9995->0.9958 loss=0.0037
+  Mean RV 5%->30%: 0.9986->0.9796 loss=0.0190
+  MF-Mean gap at 5%: +0.0010; at 30%: +0.0163
+MAR:
+  MF RV 5%->30%: 0.9994->0.9950 loss=0.0044
+  Mean RV 5%->30%: 0.9978->0.9664 loss=0.0313
+  MF-Mean gap at 5%: +0.0017; at 30%: +0.0286
+
+Rankings RV (best->worst):
+  MCAR  5%: MissForest > RFECA-k20 > KNN > RFECA-k10 > RFECA-k5 > Mean
+  MCAR 10%: MissForest > RFECA-k20 > KNN > RFECA-k10 > RFECA-k5 > Mean
+  MCAR 20%: MissForest > KNN > RFECA-k20 > RFECA-k10 > RFECA-k5 > Mean
+  MCAR 30%: MissForest > KNN > RFECA-k20 > RFECA-k10 > RFECA-k5 > Mean
+  MAR  5%: MissForest > RFECA-k20 > KNN > RFECA-k10 > RFECA-k5 > Mean
+  MAR 10%: MissForest > KNN > RFECA-k20 > RFECA-k10 > RFECA-k5 > Mean
+  MAR 20%: MissForest > KNN > RFECA-k20 > RFECA-k10 > RFECA-k5 > Mean
+  MAR 30%: MissForest > KNN > RFECA-k20 > RFECA-k10 > RFECA-k5 > Mean
+
+Friedman RV:
+  MAR 5%: chi2=28.08 p=3.49e-06
+  MAR 10%: chi2=27.12 p=5.56e-06
+  MAR 20%: chi2=28.08 p=3.49e-06
+  MAR 30%: chi2=27.48 p=4.67e-06
+  MCAR 5%: chi2=27.12 p=5.56e-06
+  MCAR 10%: chi2=27.12 p=5.56e-06
+  MCAR 20%: chi2=28.08 p=3.49e-06
+  MCAR 30%: chi2=28.92 p=2.33e-06
+Primary RV vs Mean (MF and RFECA-k20):
+  MAR 5% MissForest: delta=0.00167 r=1.00 p_Holm=0.0156
+  MAR 5% RFECA_SVR(k=20): delta=0.00156 r=1.00 p_Holm=0.0156
+  MAR 10% MissForest: delta=0.00446 r=1.00 p_Holm=0.0156
+  MAR 10% RFECA_SVR(k=20): delta=0.00416 r=1.00 p_Holm=0.0156
+  MAR 20% MissForest: delta=0.01406 r=1.00 p_Holm=0.0156
+  MAR 20% RFECA_SVR(k=20): delta=0.01295 r=1.00 p_Holm=0.0156
+  MAR 30% MissForest: delta=0.02862 r=1.00 p_Holm=0.0156
+  MAR 30% RFECA_SVR(k=20): delta=0.02581 r=1.00 p_Holm=0.0156
+  MCAR 5% MissForest: delta=0.00096 r=1.00 p_Holm=0.0156
+  MCAR 5% RFECA_SVR(k=20): delta=0.00088 r=1.00 p_Holm=0.0156
+  MCAR 10% MissForest: delta=0.00234 r=1.00 p_Holm=0.0156
+  MCAR 10% RFECA_SVR(k=20): delta=0.00213 r=1.00 p_Holm=0.0156
+  MCAR 20% MissForest: delta=0.00732 r=1.00 p_Holm=0.0156
+  MCAR 20% RFECA_SVR(k=20): delta=0.00652 r=1.00 p_Holm=0.0156
+  MCAR 30% MissForest: delta=0.01627 r=1.00 p_Holm=0.0156
+  MCAR 30% RFECA_SVR(k=20): delta=0.01458 r=1.00 p_Holm=0.0156
+
+=== 3. CLASSIFICATION ===
+f1_macro: best=0.8822 (RFECA-k20,MCAR,5%) worst=0.8480 (Mean,MAR,30%)
+bal_acc: best=0.8725 (RFECA-k10,MCAR,5%) worst=0.8379 (Mean,MAR,30%)
+precision_macro: best=0.8964 (RFECA-k20,MCAR,5%) worst=0.8625 (Mean,MAR,30%)
+recall_macro: best=0.8725 (RFECA-k10,MCAR,5%) worst=0.8379 (Mean,MAR,30%)
+
+F1 MCAR  5%: MF=0.8812 Mean=0.8787 d=+0.0025; bestRFECA=RFECA-k20=0.8822 MF-RFECA=-0.0010
+F1 MCAR 10%: MF=0.8787 Mean=0.8748 d=+0.0039; bestRFECA=RFECA-k20=0.8788 MF-RFECA=-0.0002
+F1 MCAR 20%: MF=0.8742 Mean=0.8661 d=+0.0081; bestRFECA=RFECA-k20=0.8749 MF-RFECA=-0.0007
+F1 MCAR 30%: MF=0.8662 Mean=0.8551 d=+0.0111; bestRFECA=RFECA-k10=0.8639 MF-RFECA=+0.0024
+F1 MAR  5%: MF=0.8806 Mean=0.8807 d=-0.0001; bestRFECA=RFECA-k20=0.8816 MF-RFECA=-0.0010
+F1 MAR 10%: MF=0.8792 Mean=0.8743 d=+0.0048; bestRFECA=RFECA-k5=0.8788 MF-RFECA=+0.0004
+F1 MAR 20%: MF=0.8708 Mean=0.8636 d=+0.0072; bestRFECA=RFECA-k20=0.8710 MF-RFECA=-0.0002
+F1 MAR 30%: MF=0.8606 Mean=0.8480 d=+0.0126; bestRFECA=RFECA-k20=0.8586 MF-RFECA=+0.0020
+Avg MF-Mean F1 (8 cells): +0.0063
+Avg MF-bestRFECA F1 (8 cells): +0.0002
+MF-bestRFECA range: [-0.0010, +0.0024]
+
+F1 loss 5->30 MCAR Mean: 0.8787->0.8551 = 0.0237
+F1 loss 5->30 MCAR MissForest: 0.8812->0.8662 = 0.0150
+F1 loss 5->30 MCAR RFECA-k20: 0.8822->0.8627 = 0.0195
+F1 loss 5->30 MAR Mean: 0.8807->0.8480 = 0.0327
+F1 loss 5->30 MAR MissForest: 0.8806->0.8606 = 0.0200
+F1 loss 5->30 MAR RFECA-k20: 0.8816->0.8586 = 0.0230
+Baseline 0% Macro-F1 (all methods): 0.886
+
+Primary F1 vs Mean (all primary methods):
+  [ns] MAR 5% MissForest: dF1=-0.0001 [-0.0021,+0.0021] r=-0.13 p_Holm=1
+  [ns] MAR 5% RFECA_SVR(k=10): dF1=+0.0005 [-0.0014,+0.0025] r=0.35 p_Holm=1
+  [ns] MAR 5% RFECA_SVR(k=20): dF1=+0.0009 [-0.0020,+0.0048] r=-0.09 p_Holm=1
+  [ns] MAR 5% RFECA_SVR(k=5): dF1=-0.0006 [-0.0029,+0.0023] r=-0.35 p_Holm=1
+  [ns] MAR 10% MissForest: dF1=+0.0048 [+0.0010,+0.0082] r=0.78 p_Holm=0.219
+  [ns] MAR 10% RFECA_SVR(k=10): dF1=+0.0025 [-0.0013,+0.0058] r=0.53 p_Holm=0.801
+  [ns] MAR 10% RFECA_SVR(k=20): dF1=+0.0037 [-0.0001,+0.0069] r=0.64 p_Holm=0.504
+  [ns] MAR 10% RFECA_SVR(k=5): dF1=+0.0044 [+0.0011,+0.0075] r=0.71 p_Holm=0.342
+  [SIG] MAR 20% MissForest: dF1=+0.0072 [+0.0039,+0.0110] r=0.96 p_Holm=0.0234
+  [SIG] MAR 20% RFECA_SVR(k=10): dF1=+0.0073 [+0.0039,+0.0112] r=0.96 p_Holm=0.0234
+  [SIG] MAR 20% RFECA_SVR(k=20): dF1=+0.0074 [+0.0045,+0.0112] r=1.00 p_Holm=0.0156
+  [SIG] MAR 20% RFECA_SVR(k=5): dF1=+0.0073 [+0.0049,+0.0099] r=1.00 p_Holm=0.0156
+  [SIG] MAR 30% MissForest: dF1=+0.0126 [+0.0086,+0.0172] r=1.00 p_Holm=0.0156
+  [SIG] MAR 30% RFECA_SVR(k=10): dF1=+0.0096 [+0.0052,+0.0145] r=1.00 p_Holm=0.0156
+  [SIG] MAR 30% RFECA_SVR(k=20): dF1=+0.0106 [+0.0048,+0.0171] r=0.89 p_Holm=0.0195
+  [SIG] MAR 30% RFECA_SVR(k=5): dF1=+0.0077 [+0.0031,+0.0129] r=0.89 p_Holm=0.0195
+  [ns] MCAR 5% MissForest: dF1=+0.0025 [-0.0007,+0.0053] r=0.53 p_Holm=0.654
+  [ns] MCAR 5% RFECA_SVR(k=10): dF1=+0.0034 [+0.0014,+0.0054] r=0.82 p_Holm=0.156
+  [ns] MCAR 5% RFECA_SVR(k=20): dF1=+0.0035 [+0.0013,+0.0059] r=0.82 p_Holm=0.156
+  [ns] MCAR 5% RFECA_SVR(k=5): dF1=+0.0025 [-0.0000,+0.0050] r=0.60 p_Holm=0.633
+  [ns] MCAR 10% MissForest: dF1=+0.0039 [+0.0009,+0.0067] r=0.71 p_Holm=0.244
+  [ns] MCAR 10% RFECA_SVR(k=10): dF1=+0.0033 [+0.0007,+0.0056] r=0.75 p_Holm=0.223
+  [SIG] MCAR 10% RFECA_SVR(k=20): dF1=+0.0040 [+0.0021,+0.0062] r=0.93 p_Holm=0.0469
+  [ns] MCAR 10% RFECA_SVR(k=5): dF1=+0.0023 [-0.0002,+0.0047] r=0.49 p_Holm=0.48
+  [SIG] MCAR 20% MissForest: dF1=+0.0081 [+0.0059,+0.0103] r=1.00 p_Holm=0.0156
+  [ns] MCAR 20% RFECA_SVR(k=10): dF1=+0.0039 [+0.0010,+0.0067] r=0.75 p_Holm=0.111
+  [SIG] MCAR 20% RFECA_SVR(k=20): dF1=+0.0088 [+0.0058,+0.0116] r=1.00 p_Holm=0.0156
+  [SIG] MCAR 20% RFECA_SVR(k=5): dF1=+0.0039 [+0.0020,+0.0058] r=0.93 p_Holm=0.0352
+  [SIG] MCAR 30% MissForest: dF1=+0.0111 [+0.0085,+0.0141] r=1.00 p_Holm=0.0156
+  [SIG] MCAR 30% RFECA_SVR(k=10): dF1=+0.0088 [+0.0054,+0.0126] r=1.00 p_Holm=0.0156
+  [ns] MCAR 30% RFECA_SVR(k=20): dF1=+0.0076 [+0.0028,+0.0128] r=0.82 p_Holm=0.0684
+  [ns] MCAR 30% RFECA_SVR(k=5): dF1=+0.0061 [+0.0024,+0.0103] r=0.85 p_Holm=0.0684
+LARGEST SIG |dF1| vs Mean: MissForest mar 30% d=+0.0126 r=1.00
+LARGEST NON-SIG |dF1| vs Mean: RFECA_SVR(k=20) mcar 30% d=+0.0076 r=0.82 p_Holm=0.0684
+
+Friedman F1:
+  MAR 5%: chi2=0.84 p=0.84
+  MAR 10%: chi2=10.20 p=0.0169
+  MAR 20%: chi2=16.68 p=0.000822
+  MAR 30%: chi2=18.36 p=0.000371
+  MCAR 5%: chi2=6.00 p=0.112
+  MCAR 10%: chi2=9.00 p=0.0293
+  MCAR 20%: chi2=21.36 p=8.86e-05
+  MCAR 30%: chi2=15.00 p=0.00182
+
+Companion metrics MCAR (Mean / RFECA-k20 / MissForest):
+  bal_acc 5%: Mean=0.869; RFECA-k20=0.872; MissForest=0.872
+  bal_acc 30%: Mean=0.845; RFECA-k20=0.854; MissForest=0.857
+  precision_macro 5%: Mean=0.892; RFECA-k20=0.896; MissForest=0.895
+  precision_macro 30%: Mean=0.869; RFECA-k20=0.875; MissForest=0.879
+  recall_macro 5%: Mean=0.869; RFECA-k20=0.872; MissForest=0.872
+  recall_macro 30%: Mean=0.845; RFECA-k20=0.854; MissForest=0.857
+
+MissForest vs RFECA F1 pairwise rows: 24
+  Holm-sig MF vs RFECA pairs: 0/24
+  mean d(MF-RFECA)=+0.0013 max=+0.0051 min=-0.0010
+
+=== 4. RMSE vs F1 ===
+Spearman: {'overall': {'spearman_rho': -0.5488493269648285, 'p_value': 5.36257321652778e-05, 'n_points': 48}, 'MCAR': {'spearman_rho': -0.646086956521739, 'p_value': 0.0006483519369920592, 'n_points': 24}, 'MAR': {'spearman_rho': -0.5156521739130434, 'p_value': 0.009906970265358946, 'n_points': 24}}
+Pearson rho=-0.370 p=0.00965 (descriptive; points not independent)
+RMSE range: 0.617-1.169 span=0.552
+F1 range: 0.8480-0.8822 span=0.0342
+RMSE span / F1 span = 16.1x
+
+Strongest decoupling examples (large RMSE drop, tiny F1 gain):
+  MAR 5%: RMSE drop=0.540 (46.2%), F1 gain=-0.0001
+  MCAR 5%: RMSE drop=0.449 (42.1%), F1 gain=+0.0025
+  MCAR 10%: RMSE drop=0.440 (41.4%), F1 gain=+0.0039
+  MAR 10%: RMSE drop=0.517 (44.6%), F1 gain=+0.0048
+
+=== 5. MCAR vs MAR ===
+rmse: mean(MAR-MCAR)=+0.0538 median=+0.0466 [+0.0118, +0.1231]
+corr_rv: mean(MAR-MCAR)=-0.0016 median=-0.0007 [-0.0131, -0.0001]
+f1_macro: mean(MAR-MCAR)=-0.0018 median=-0.0009 [-0.0100, +0.0030]
+Mean RMSE MAR-MCAR by rate:
+  5%: +0.102
+  10%: +0.097
+  20%: +0.082
+  30%: +0.074
+Best RMSE method identical MCAR/MAR at all rates? MissForest yes
+Worst RMSE method identical? Mean yes
+
+=== 6. CPTAC 2C ===
+CPTAC best RMSE: 1.761 (MissForest, MCAR, 5%)
+CPTAC worst RMSE: 3.067 (RFECA-k20, MAR, 30%)
+MissForest always best RMSE on CPTAC: True
+CPTAC MF vs Mean RMSE reduction:
+  MCAR 5%: 37.3% (2.808->1.761)
+  MCAR 30%: 30.9% (2.786->1.925)
+  MAR 5%: 36.7% (3.033->1.919)
+  MAR 30%: 26.6% (2.932->2.152)
+
+F1 SD mean across method x rate x mech:
+  METABRIC: 0.0047
+  CPTAC 2C: 0.0183
+Ratio CPTAC/METABRIC F1 SD: 3.9x
+CPTAC F1 winners (unstable):
+  MCAR 5%: KNN=0.925 (SD=0.012); MissForest=0.922
+  MCAR 10%: KNN=0.925 (SD=0.009); MissForest=0.918
+  MCAR 20%: KNN=0.912 (SD=0.024); MissForest=0.908
+  MCAR 30%: MissForest=0.916 (SD=0.015); MissForest=0.916
+  MAR 5%: KNN=0.934 (SD=0.013); MissForest=0.929
+  MAR 10%: MissForest=0.926 (SD=0.015); MissForest=0.926
+  MAR 20%: KNN=0.928 (SD=0.020); MissForest=0.927
+  MAR 30%: MissForest=0.896 (SD=0.024); MissForest=0.896
+CPTAC RFECA-k20 RMSE worse than Mean:
+  MCAR 30%: Mean=2.786 RFECA20=2.826
+  MAR 30%: Mean=2.932 RFECA20=3.067
+
+=== 7. STATS HIGHLIGHTS ===
+Strongest: RMSE/RV Friedman p~1e-6 all rates; rank-biserial r=-1.0 (RMSE) / +1.0 (RV) vs Mean
+Largest |effect| reconstruction: r=+/-1.00 for MF and RFECA-k20 vs Mean (all rates)
+Smallest |effect| F1 among tested primary: check ns rows
+Smallest |r| F1 primary: 0.091
+Largest |r| F1 primary among SIG: 1.0
+Largest |r| F1 primary among NS: 0.8545454545454545
+F1 Holm-sig vs Mean appears mainly at 20-30% (see SIG list above); 5% mostly ns

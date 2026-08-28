@@ -1,0 +1,5 @@
+{
+  "status": "UNAVAILABLE_FOR_CROSS_METHOD",
+  "reason": "Baselines (Mean/KNN/MissForest) do not store per-gene RMSE in final artifacts (only fold-level aggregate). Gene-level difficulty and selection analysis is OriginalRFECA-only. Scenario-level winners are in win_by_scenario.csv.",
+  "available": "gene_difficulty_*_original_rfeca.csv, rfeca_predictor_frequency.csv"
+}

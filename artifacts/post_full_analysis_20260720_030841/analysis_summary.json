@@ -1,0 +1,28 @@
+{
+  "generated_at_utc": "2026-07-20T03:08:43.397615+00:00",
+  "discovery_dir": "<repo-root>\\artifacts\\discovery_full_20260719_230651",
+  "metabric_dir": "<repo-root>\\artifacts\\metabric_full_20260719_234633",
+  "bullets": [
+    "New Discovery EnsembleSoft F1 is on average **-0.013** vs legacy paper (mean abs delta=0.015); drop expected from fold-local correlation + stricter mask policy.",
+    "METABRIC: RFECA reduces RMSE vs SimpleMean by **34.5%** on average across rates (best at 5%: 36.9%).",
+    "Ranking consistency (RMSE vs F1): METABRIC same-winner rates = 3/4; Discovery = 4/4 \u2014 better imputation does not always mean better classification.",
+    "METABRIC F1 Wilcoxon (RFECA vs Mean/KNN, p<0.05): **14** significant pairs (see `wilcoxon_pairwise.csv`).",
+    "Stability: Discovery CV(F1) is ~0.057 median vs METABRIC ~0.016 \u2014 METABRIC estimates are far tighter.",
+    "Per-subtype F1/precision/recall columns are now implemented in `evaluation.py`; re-run smoke/full to populate `exp2_classification_per_class.csv`."
+  ],
+  "artifact_files": [
+    "new_vs_legacy_discovery.csv",
+    "cross_cohort_classification.csv",
+    "cross_cohort_imputation.csv",
+    "wilcoxon_pairwise.csv",
+    "wilcoxon_metabric_rfeca_vs_baselines_sig.csv",
+    "ranking_consistency.csv",
+    "fold_stability.csv",
+    "best_by_rate.csv",
+    "metabric_rfeca_rmse_uplift_vs_mean.csv"
+  ],
+  "legacy_mean_delta_f1": -0.013242986626899662,
+  "legacy_mean_abs_delta_f1": 0.014655305592957756,
+  "metabric_mean_rmse_pct_reduction_vs_simplemean": 34.50070286431797,
+  "n_sig_metabric_rfeca_vs_baseline_f1": 14
+}

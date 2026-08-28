@@ -1,0 +1,40 @@
+% Auto-generated sensitivity table
+\begin{table}[t]
+\centering
+\small
+\caption{Inductive RFECA sensitivity on METABRIC (MCAR and MAR). Legacy six-imputer campaign versus inductive RFECA-only re-run (seed scheme v2). Masks/seeds differ; differences are \emph{not} a pure ablation of inductiveness. Full CPTAC 2C comparisons are in the accompanying CSV.}
+\label{tab:rfeca_inductive}
+\begin{tabular}{llcccccc}
+\hline
+Mech. & Method & Rate & Legacy RMSE & Ind.\ RMSE & $\Delta$RMSE & Legacy F1 & Ind.\ F1 \\
+\hline
+\multicolumn{8}{l}{\textit{MCAR}} \\
+ & RFECA-k10 & 5\% & 0.678 & 0.663 & -0.014 & 0.882 & 0.882 \\
+ & RFECA-k10 & 10\% & 0.689 & 0.674 & -0.015 & 0.878 & 0.878 \\
+ & RFECA-k10 & 20\% & 0.706 & 0.695 & -0.010 & 0.870 & 0.871 \\
+ & RFECA-k10 & 30\% & 0.729 & 0.732 & +0.003 & 0.864 & 0.863 \\
+ & RFECA-k20 & 5\% & 0.673 & 0.649 & -0.025 & 0.882 & 0.883 \\
+ & RFECA-k20 & 10\% & 0.686 & 0.659 & -0.027 & 0.879 & 0.878 \\
+ & RFECA-k20 & 20\% & 0.706 & 0.684 & -0.022 & 0.875 & 0.873 \\
+ & RFECA-k20 & 30\% & 0.736 & 0.724 & -0.012 & 0.863 & 0.864 \\
+ & RFECA-k5 & 5\% & 0.693 & 0.684 & -0.009 & 0.881 & 0.884 \\
+ & RFECA-k5 & 10\% & 0.706 & 0.693 & -0.013 & 0.877 & 0.877 \\
+ & RFECA-k5 & 20\% & 0.723 & 0.717 & -0.007 & 0.870 & 0.871 \\
+ & RFECA-k5 & 30\% & 0.743 & 0.747 & +0.003 & 0.861 & 0.861 \\
+\hline
+\multicolumn{8}{l}{\textit{MAR}} \\
+ & RFECA-k10 & 5\% & 0.705 & 0.697 & -0.009 & 0.881 & 0.882 \\
+ & RFECA-k10 & 10\% & 0.719 & 0.722 & +0.003 & 0.877 & 0.878 \\
+ & RFECA-k10 & 20\% & 0.764 & 0.755 & -0.009 & 0.871 & 0.871 \\
+ & RFECA-k10 & 30\% & 0.810 & 0.796 & -0.014 & 0.858 & 0.861 \\
+ & RFECA-k20 & 5\% & 0.700 & 0.683 & -0.018 & 0.882 & 0.881 \\
+ & RFECA-k20 & 10\% & 0.717 & 0.708 & -0.009 & 0.878 & 0.878 \\
+ & RFECA-k20 & 20\% & 0.767 & 0.744 & -0.023 & 0.871 & 0.872 \\
+ & RFECA-k20 & 30\% & 0.816 & 0.786 & -0.030 & 0.859 & 0.859 \\
+ & RFECA-k5 & 5\% & 0.721 & 0.720 & -0.001 & 0.880 & 0.880 \\
+ & RFECA-k5 & 10\% & 0.741 & 0.747 & +0.005 & 0.879 & 0.878 \\
+ & RFECA-k5 & 20\% & 0.787 & 0.783 & -0.004 & 0.871 & 0.869 \\
+ & RFECA-k5 & 30\% & 0.835 & 0.826 & -0.009 & 0.856 & 0.859 \\
+\hline
+\end{tabular}
+\end{table}

@@ -1,0 +1,21 @@
+{
+  "generated_at_utc": "2026-08-03T16:14:12.838681+00:00",
+  "mcar_full": "artifacts/metabric_full_20260724_185916",
+  "mar_full": "artifacts/metabric_full_mar_20260725_062517",
+  "mcar_multiclf": "artifacts/metabric_multiclf_mcar_20260729_031215",
+  "mar_multiclf": "artifacts/metabric_multiclf_mar_20260729_184033",
+  "n_baseline_raw_rows": 3600,
+  "n_unified_rows": 112,
+  "rates": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "baseline_imputers": [
+    "Mean",
+    "KNN",
+    "MissForest"
+  ],
+  "note": "EnsembleSoft available at 5/10/20/30 from metabric_full. SVC/LogReg/RF/GB from multiclf at 20/30 only."
+}

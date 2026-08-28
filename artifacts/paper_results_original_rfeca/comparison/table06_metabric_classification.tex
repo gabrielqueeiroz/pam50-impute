@@ -1,0 +1,65 @@
+% Auto-generated — do not edit by hand
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{METABRIC downstream PAM50 classification metrics (EnsembleSoft) under MCAR and MAR, including the 0\% missingness baseline. Best value per row in \textbf{bold} (all metrics higher is better). Entries are mean $\pm$ SD across 10 missingness replications (fold-averaged within replication). Macro-F1 is the primary endpoint; balanced accuracy, macro-precision, and macro-recall are reported for completeness.}
+\label{tab:metabric_classification}
+\setlength{\tabcolsep}{2.8pt}
+\begin{tabular}{llcccccc}
+\hline
+Rate & Metric & Mean & KNN & RFECA-k5 & RFECA-k10 & RFECA-k20 & MissForest \\
+\hline
+\multicolumn{8}{l}{\textit{MCAR}} \\
+0\% & Macro-F1 & \textbf{0.886 $\pm$ 0.000} & \textbf{0.886 $\pm$ 0.000} & \textbf{0.886 $\pm$ 0.000} & \textbf{0.886 $\pm$ 0.000} & \textbf{0.886 $\pm$ 0.000} & \textbf{0.886 $\pm$ 0.000} \\
+ & Bal.\ Acc. & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} \\
+ & Precision & \textbf{0.901 $\pm$ 0.000} & \textbf{0.901 $\pm$ 0.000} & \textbf{0.901 $\pm$ 0.000} & \textbf{0.901 $\pm$ 0.000} & \textbf{0.901 $\pm$ 0.000} & \textbf{0.901 $\pm$ 0.000} \\
+ & Recall & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} \\
+\hline
+5\% & Macro-F1 & 0.879 $\pm$ 0.005 & 0.881 $\pm$ 0.003 & 0.881 $\pm$ 0.004 & 0.882 $\pm$ 0.003 & \textbf{0.882 $\pm$ 0.002} & 0.881 $\pm$ 0.004 \\
+ & Bal.\ Acc. & 0.869 $\pm$ 0.005 & 0.872 $\pm$ 0.003 & 0.872 $\pm$ 0.004 & \textbf{0.873 $\pm$ 0.003} & 0.872 $\pm$ 0.002 & 0.872 $\pm$ 0.004 \\
+ & Precision & 0.892 $\pm$ 0.004 & 0.895 $\pm$ 0.003 & 0.895 $\pm$ 0.004 & 0.896 $\pm$ 0.003 & \textbf{0.896 $\pm$ 0.002} & 0.895 $\pm$ 0.005 \\
+ & Recall & 0.869 $\pm$ 0.005 & 0.872 $\pm$ 0.003 & 0.872 $\pm$ 0.004 & \textbf{0.873 $\pm$ 0.003} & 0.872 $\pm$ 0.002 & 0.872 $\pm$ 0.004 \\
+\hline
+10\% & Macro-F1 & 0.875 $\pm$ 0.004 & 0.876 $\pm$ 0.003 & 0.877 $\pm$ 0.004 & 0.878 $\pm$ 0.005 & \textbf{0.879 $\pm$ 0.004} & 0.879 $\pm$ 0.005 \\
+ & Bal.\ Acc. & 0.865 $\pm$ 0.005 & 0.866 $\pm$ 0.004 & 0.867 $\pm$ 0.004 & 0.868 $\pm$ 0.005 & 0.869 $\pm$ 0.004 & \textbf{0.869 $\pm$ 0.004} \\
+ & Precision & 0.888 $\pm$ 0.004 & 0.889 $\pm$ 0.003 & 0.891 $\pm$ 0.004 & 0.892 $\pm$ 0.005 & \textbf{0.893 $\pm$ 0.005} & 0.892 $\pm$ 0.005 \\
+ & Recall & 0.865 $\pm$ 0.005 & 0.866 $\pm$ 0.004 & 0.867 $\pm$ 0.004 & 0.868 $\pm$ 0.005 & 0.869 $\pm$ 0.004 & \textbf{0.869 $\pm$ 0.004} \\
+\hline
+20\% & Macro-F1 & 0.866 $\pm$ 0.004 & 0.869 $\pm$ 0.005 & 0.870 $\pm$ 0.005 & 0.870 $\pm$ 0.006 & \textbf{0.875 $\pm$ 0.004} & 0.874 $\pm$ 0.005 \\
+ & Bal.\ Acc. & 0.857 $\pm$ 0.004 & 0.860 $\pm$ 0.005 & 0.861 $\pm$ 0.005 & 0.861 $\pm$ 0.005 & \textbf{0.865 $\pm$ 0.005} & 0.865 $\pm$ 0.005 \\
+ & Precision & 0.879 $\pm$ 0.004 & 0.883 $\pm$ 0.005 & 0.883 $\pm$ 0.005 & 0.884 $\pm$ 0.006 & \textbf{0.888 $\pm$ 0.003} & 0.888 $\pm$ 0.004 \\
+ & Recall & 0.857 $\pm$ 0.004 & 0.860 $\pm$ 0.005 & 0.861 $\pm$ 0.005 & 0.861 $\pm$ 0.005 & \textbf{0.865 $\pm$ 0.005} & 0.865 $\pm$ 0.005 \\
+\hline
+30\% & Macro-F1 & 0.855 $\pm$ 0.007 & 0.858 $\pm$ 0.006 & 0.861 $\pm$ 0.005 & 0.864 $\pm$ 0.005 & 0.863 $\pm$ 0.006 & \textbf{0.866 $\pm$ 0.005} \\
+ & Bal.\ Acc. & 0.845 $\pm$ 0.008 & 0.848 $\pm$ 0.006 & 0.852 $\pm$ 0.005 & 0.855 $\pm$ 0.005 & 0.854 $\pm$ 0.006 & \textbf{0.857 $\pm$ 0.005} \\
+ & Precision & 0.869 $\pm$ 0.007 & 0.873 $\pm$ 0.006 & 0.874 $\pm$ 0.005 & 0.877 $\pm$ 0.005 & 0.875 $\pm$ 0.007 & \textbf{0.879 $\pm$ 0.006} \\
+ & Recall & 0.845 $\pm$ 0.008 & 0.848 $\pm$ 0.006 & 0.852 $\pm$ 0.005 & 0.855 $\pm$ 0.005 & 0.854 $\pm$ 0.006 & \textbf{0.857 $\pm$ 0.005} \\
+\hline
+\multicolumn{8}{l}{\textit{MAR}} \\
+0\% & Macro-F1 & \textbf{0.886 $\pm$ 0.000} & \textbf{0.886 $\pm$ 0.000} & \textbf{0.886 $\pm$ 0.000} & \textbf{0.886 $\pm$ 0.000} & \textbf{0.886 $\pm$ 0.000} & \textbf{0.886 $\pm$ 0.000} \\
+ & Bal.\ Acc. & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} \\
+ & Precision & \textbf{0.901 $\pm$ 0.000} & \textbf{0.901 $\pm$ 0.000} & \textbf{0.901 $\pm$ 0.000} & \textbf{0.901 $\pm$ 0.000} & \textbf{0.901 $\pm$ 0.000} & \textbf{0.901 $\pm$ 0.000} \\
+ & Recall & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} & \textbf{0.875 $\pm$ 0.000} \\
+\hline
+5\% & Macro-F1 & 0.881 $\pm$ 0.005 & 0.880 $\pm$ 0.003 & 0.880 $\pm$ 0.003 & 0.881 $\pm$ 0.005 & \textbf{0.882 $\pm$ 0.004} & 0.881 $\pm$ 0.004 \\
+ & Bal.\ Acc. & 0.871 $\pm$ 0.005 & 0.870 $\pm$ 0.003 & 0.871 $\pm$ 0.003 & 0.871 $\pm$ 0.005 & \textbf{0.872 $\pm$ 0.005} & 0.871 $\pm$ 0.004 \\
+ & Precision & 0.895 $\pm$ 0.006 & 0.895 $\pm$ 0.004 & 0.894 $\pm$ 0.003 & 0.895 $\pm$ 0.005 & \textbf{0.896 $\pm$ 0.004} & 0.895 $\pm$ 0.004 \\
+ & Recall & 0.871 $\pm$ 0.005 & 0.870 $\pm$ 0.003 & 0.871 $\pm$ 0.003 & 0.871 $\pm$ 0.005 & \textbf{0.872 $\pm$ 0.005} & 0.871 $\pm$ 0.004 \\
+\hline
+10\% & Macro-F1 & 0.874 $\pm$ 0.005 & 0.878 $\pm$ 0.002 & 0.879 $\pm$ 0.004 & 0.877 $\pm$ 0.004 & 0.878 $\pm$ 0.005 & \textbf{0.879 $\pm$ 0.003} \\
+ & Bal.\ Acc. & 0.865 $\pm$ 0.005 & 0.868 $\pm$ 0.002 & 0.869 $\pm$ 0.004 & 0.868 $\pm$ 0.004 & 0.868 $\pm$ 0.004 & \textbf{0.869 $\pm$ 0.003} \\
+ & Precision & 0.888 $\pm$ 0.005 & 0.892 $\pm$ 0.003 & 0.893 $\pm$ 0.005 & 0.890 $\pm$ 0.003 & 0.892 $\pm$ 0.005 & \textbf{0.893 $\pm$ 0.004} \\
+ & Recall & 0.865 $\pm$ 0.005 & 0.868 $\pm$ 0.002 & 0.869 $\pm$ 0.004 & 0.868 $\pm$ 0.004 & 0.868 $\pm$ 0.004 & \textbf{0.869 $\pm$ 0.003} \\
+\hline
+20\% & Macro-F1 & 0.864 $\pm$ 0.004 & \textbf{0.872 $\pm$ 0.005} & 0.871 $\pm$ 0.006 & 0.871 $\pm$ 0.005 & 0.871 $\pm$ 0.005 & 0.871 $\pm$ 0.006 \\
+ & Bal.\ Acc. & 0.854 $\pm$ 0.004 & 0.862 $\pm$ 0.004 & 0.862 $\pm$ 0.005 & 0.862 $\pm$ 0.005 & \textbf{0.863 $\pm$ 0.005} & 0.861 $\pm$ 0.006 \\
+ & Precision & 0.877 $\pm$ 0.005 & \textbf{0.887 $\pm$ 0.005} & 0.884 $\pm$ 0.006 & 0.884 $\pm$ 0.005 & 0.884 $\pm$ 0.004 & 0.884 $\pm$ 0.006 \\
+ & Recall & 0.854 $\pm$ 0.004 & 0.862 $\pm$ 0.004 & 0.862 $\pm$ 0.005 & 0.862 $\pm$ 0.005 & \textbf{0.863 $\pm$ 0.005} & 0.861 $\pm$ 0.006 \\
+\hline
+30\% & Macro-F1 & 0.848 $\pm$ 0.010 & 0.848 $\pm$ 0.006 & 0.856 $\pm$ 0.005 & 0.858 $\pm$ 0.006 & 0.859 $\pm$ 0.006 & \textbf{0.861 $\pm$ 0.006} \\
+ & Bal.\ Acc. & 0.838 $\pm$ 0.010 & 0.838 $\pm$ 0.006 & 0.846 $\pm$ 0.005 & 0.849 $\pm$ 0.005 & 0.850 $\pm$ 0.006 & \textbf{0.851 $\pm$ 0.006} \\
+ & Precision & 0.863 $\pm$ 0.010 & 0.863 $\pm$ 0.005 & 0.870 $\pm$ 0.006 & 0.871 $\pm$ 0.007 & 0.872 $\pm$ 0.007 & \textbf{0.875 $\pm$ 0.006} \\
+ & Recall & 0.838 $\pm$ 0.010 & 0.838 $\pm$ 0.006 & 0.846 $\pm$ 0.005 & 0.849 $\pm$ 0.005 & 0.850 $\pm$ 0.006 & \textbf{0.851 $\pm$ 0.006} \\
+\hline
+\end{tabular}
+\end{table}

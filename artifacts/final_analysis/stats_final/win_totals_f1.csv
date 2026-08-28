@@ -1,0 +1,3 @@
+method,wins,metric,n_scenarios
+OriginalRFECA,6,f1_macro,8
+MissForest,2,f1_macro,8

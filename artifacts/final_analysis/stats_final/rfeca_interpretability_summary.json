@@ -1,0 +1,147 @@
+{
+  "n_predictor_mean": 21.5585,
+  "n_predictor_median": 23.0,
+  "n_predictor_std": 3.9304327879955503,
+  "n_predictor_min": 3,
+  "n_predictor_max": 24,
+  "jaccard_mean": 0.6767254766386338,
+  "jaccard_median": 0.6697834489012979,
+  "top10_predictors": [
+    {
+      "gene": "MKI67",
+      "count_as_predictor": 1427
+    },
+    {
+      "gene": "NDC80",
+      "count_as_predictor": 1376
+    },
+    {
+      "gene": "UBE2T",
+      "count_as_predictor": 1341
+    },
+    {
+      "gene": "CEP55",
+      "count_as_predictor": 1340
+    },
+    {
+      "gene": "PTTG1",
+      "count_as_predictor": 1301
+    },
+    {
+      "gene": "KIF2C",
+      "count_as_predictor": 1289
+    },
+    {
+      "gene": "UBE2C",
+      "count_as_predictor": 1260
+    },
+    {
+      "gene": "EXO1",
+      "count_as_predictor": 1254
+    },
+    {
+      "gene": "RRM2",
+      "count_as_predictor": 1170
+    },
+    {
+      "gene": "CCNE1",
+      "count_as_predictor": 1154
+    }
+  ],
+  "hardest10_genes": [
+    {
+      "gene": "MMP11",
+      "rmse_mean": 1.2766790856231602
+    },
+    {
+      "gene": "NAT1",
+      "rmse_mean": 1.2105585966117511
+    },
+    {
+      "gene": "MAPT",
+      "rmse_mean": 1.0642943894913182
+    },
+    {
+      "gene": "SFRP1",
+      "rmse_mean": 0.9990788949848254
+    },
+    {
+      "gene": "SLC39A6",
+      "rmse_mean": 0.961265257736231
+    },
+    {
+      "gene": "ESR1",
+      "rmse_mean": 0.9581466707033595
+    },
+    {
+      "gene": "PHGDH",
+      "rmse_mean": 0.9372870519427503
+    },
+    {
+      "gene": "CDH3",
+      "rmse_mean": 0.8439550084936422
+    },
+    {
+      "gene": "PGR",
+      "rmse_mean": 0.8332748655160769
+    },
+    {
+      "gene": "FGFR4",
+      "rmse_mean": 0.8309742483821834
+    }
+  ],
+  "easiest10_genes": [
+    {
+      "gene": "ANLN",
+      "rmse_mean": 0.30580023814807783
+    },
+    {
+      "gene": "EXO1",
+      "rmse_mean": 0.30358172278667306
+    },
+    {
+      "gene": "NUF2",
+      "rmse_mean": 0.28238476758423986
+    },
+    {
+      "gene": "CEP55",
+      "rmse_mean": 0.2796722722730212
+    },
+    {
+      "gene": "KIF2C",
+      "rmse_mean": 0.2578647591021027
+    },
+    {
+      "gene": "NDC80",
+      "rmse_mean": 0.231067959275364
+    },
+    {
+      "gene": "MDM2",
+      "rmse_mean": 0.21975918462707011
+    },
+    {
+      "gene": "CDC6",
+      "rmse_mean": 0.21267879663178468
+    },
+    {
+      "gene": "MKI67",
+      "rmse_mean": 0.21232433765851266
+    },
+    {
+      "gene": "MYBL2",
+      "rmse_mean": 0.16553030224594267
+    }
+  ],
+  "consistently_hard": [
+    "CDH3",
+    "ESR1",
+    "FGFR4",
+    "MAPT",
+    "MMP11",
+    "NAT1",
+    "PGR",
+    "PHGDH",
+    "SFRP1",
+    "SLC39A6"
+  ]
+}

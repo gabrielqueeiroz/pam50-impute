@@ -1,0 +1,41 @@
+missing_rate,metric,method_a,method_b,p_value,n_pairs,note
+0.05,mae,"KNN(k=5,dist)",RFECA_SVR(k=10),0.001953125,10,
+0.05,mae,"KNN(k=5,dist)",RFECA_SVR(k=20),0.001953125,10,
+0.05,mae,"KNN(k=5,dist)",RFECA_SVR(k=5),0.001953125,10,
+0.05,mae,"KNN(k=5,dist)",SimpleMean,0.001953125,10,
+0.05,mae,RFECA_SVR(k=10),SimpleMean,0.001953125,10,
+0.05,mae,RFECA_SVR(k=20),SimpleMean,0.001953125,10,
+0.05,mae,RFECA_SVR(k=5),SimpleMean,0.001953125,10,
+0.05,mae,RFECA_SVR(k=10),RFECA_SVR(k=20),1.0,10,Vetores idênticos
+0.05,mae,RFECA_SVR(k=10),RFECA_SVR(k=5),1.0,10,Vetores idênticos
+0.05,mae,RFECA_SVR(k=20),RFECA_SVR(k=5),1.0,10,Vetores idênticos
+0.1,mae,"KNN(k=5,dist)",RFECA_SVR(k=10),0.001953125,10,
+0.1,mae,"KNN(k=5,dist)",RFECA_SVR(k=20),0.001953125,10,
+0.1,mae,"KNN(k=5,dist)",RFECA_SVR(k=5),0.001953125,10,
+0.1,mae,"KNN(k=5,dist)",SimpleMean,0.001953125,10,
+0.1,mae,RFECA_SVR(k=10),SimpleMean,0.001953125,10,
+0.1,mae,RFECA_SVR(k=20),SimpleMean,0.001953125,10,
+0.1,mae,RFECA_SVR(k=5),SimpleMean,0.001953125,10,
+0.1,mae,RFECA_SVR(k=10),RFECA_SVR(k=20),1.0,10,Vetores idênticos
+0.1,mae,RFECA_SVR(k=10),RFECA_SVR(k=5),1.0,10,Vetores idênticos
+0.1,mae,RFECA_SVR(k=20),RFECA_SVR(k=5),1.0,10,Vetores idênticos
+0.2,mae,"KNN(k=5,dist)",RFECA_SVR(k=10),0.001953125,10,
+0.2,mae,"KNN(k=5,dist)",RFECA_SVR(k=20),0.001953125,10,
+0.2,mae,"KNN(k=5,dist)",RFECA_SVR(k=5),0.001953125,10,
+0.2,mae,"KNN(k=5,dist)",SimpleMean,0.001953125,10,
+0.2,mae,RFECA_SVR(k=10),SimpleMean,0.001953125,10,
+0.2,mae,RFECA_SVR(k=20),SimpleMean,0.001953125,10,
+0.2,mae,RFECA_SVR(k=5),SimpleMean,0.001953125,10,
+0.2,mae,RFECA_SVR(k=10),RFECA_SVR(k=20),1.0,10,Vetores idênticos
+0.2,mae,RFECA_SVR(k=10),RFECA_SVR(k=5),1.0,10,Vetores idênticos
+0.2,mae,RFECA_SVR(k=20),RFECA_SVR(k=5),1.0,10,Vetores idênticos
+0.3,mae,"KNN(k=5,dist)",RFECA_SVR(k=10),0.001953125,10,
+0.3,mae,"KNN(k=5,dist)",RFECA_SVR(k=20),0.001953125,10,
+0.3,mae,"KNN(k=5,dist)",RFECA_SVR(k=5),0.001953125,10,
+0.3,mae,"KNN(k=5,dist)",SimpleMean,0.001953125,10,
+0.3,mae,RFECA_SVR(k=10),SimpleMean,0.001953125,10,
+0.3,mae,RFECA_SVR(k=20),SimpleMean,0.001953125,10,
+0.3,mae,RFECA_SVR(k=5),SimpleMean,0.001953125,10,
+0.3,mae,RFECA_SVR(k=10),RFECA_SVR(k=20),1.0,10,Vetores idênticos
+0.3,mae,RFECA_SVR(k=10),RFECA_SVR(k=5),1.0,10,Vetores idênticos
+0.3,mae,RFECA_SVR(k=20),RFECA_SVR(k=5),1.0,10,Vetores idênticos

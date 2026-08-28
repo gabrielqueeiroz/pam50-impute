@@ -1,0 +1,47 @@
+{
+  "decision": "nao_ampliar",
+  "detail": "Keep reduced 20%-only scope for OriginalRFECA; discuss cost/performance trade-off and asymmetry as a limitation.",
+  "score_expand": 0,
+  "reasons": [
+    "MCAR vs MAR nearly redundant (RMSE delta 4.2%)",
+    "Degradation across missingness severity is scientifically useful if RFECA is retained in the dissertation comparison"
+  ],
+  "written_at_utc": "2026-08-01T06:11:53.075393+00:00",
+  "eta": {
+    "seconds_per_gene_effective_observed": 80.37819820480001,
+    "seconds_per_replica_observed": 4018.909910240001,
+    "mcar_20_5reps": {
+      "optimistic_hours": 4.744546421811112,
+      "central_hours": 5.581819319777779,
+      "conservative_hours": 6.9772741497222235
+    },
+    "mar_20_5reps": {
+      "optimistic_hours": 4.744546421811112,
+      "central_hours": 5.581819319777779,
+      "conservative_hours": 6.9772741497222235
+    },
+    "reduced_total": {
+      "optimistic_hours": 9.489092843622224,
+      "central_hours": 11.163638639555558,
+      "conservative_hours": 13.954548299444447
+    },
+    "extra_10pct_mcar_mar_5reps": {
+      "optimistic_hours": 9.489092843622224,
+      "central_hours": 11.163638639555558,
+      "conservative_hours": 13.954548299444447
+    },
+    "extra_30pct_mcar_mar_5reps": {
+      "optimistic_hours": 9.489092843622224,
+      "central_hours": 11.163638639555558,
+      "conservative_hours": 13.954548299444447
+    },
+    "expanded_full_10_20_30": {
+      "optimistic_hours": 28.467278530866672,
+      "central_hours": 33.49091591866667,
+      "conservative_hours": 41.86364489833334
+    },
+    "note": "Bands: optimistic 0.85x, central 1.0x, conservative 1.25x of observed mean wall/replica. 10%/30% assumed similar cost to 20%.",
+    "elapsed_hours_orchestrator": 10.263
+  },
+  "vs_baseline": null
+}

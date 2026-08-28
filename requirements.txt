@@ -1,0 +1,9 @@
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.4
+scipy>=1.10
+feature_engine>=1.6
+joblib>=1.3
+
+# Exact pins used for OriginalRFECA TARGET-WISE freeze v0.3.0:
+#   requirements-freeze-v0.3.txt

@@ -1,0 +1,291 @@
+{
+  "cohort_name": "discovery",
+  "missing_rates": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "n_repetitions": 10,
+  "n_splits": 5,
+  "random_state": 42,
+  "primary_classifier": "EnsembleSoft",
+  "imputers": [
+    "RFECA_SVR(k=5)",
+    "RFECA_SVR(k=10)",
+    "RFECA_SVR(k=20)"
+  ],
+  "rfeca_top_k": 5,
+  "rfeca_use_abs_corr": true,
+  "rfeca_kernel": "linear",
+  "rfeca_C": 1.0,
+  "rfeca_epsilon": 0.1,
+  "rfeca_min_train_samples": 10,
+  "missforest_n_estimators": 20,
+  "missforest_max_iter": 5,
+  "missforest_n_jobs": 4,
+  "allow_precomputed_correlation": false,
+  "n_jobs": 1,
+  "tag": "full_mar_rfeca",
+  "target_cell_policy": "originally_observed_only",
+  "missingness_mechanism": "mar",
+  "missingness_seed_scheme": "v2",
+  "seeds": {
+    "base_random_state": 42,
+    "cv_random_state": 42,
+    "missingness_seed_scheme": "v2",
+    "missingness_seeds": [
+      {
+        "missing_rate": 0.0,
+        "replicate": 0,
+        "seed": 17042
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 1,
+        "seed": 1017045
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 2,
+        "seed": 2017048
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 3,
+        "seed": 3017051
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 4,
+        "seed": 4017054
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 5,
+        "seed": 5017057
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 6,
+        "seed": 6017060
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 7,
+        "seed": 7017063
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 8,
+        "seed": 8017066
+      },
+      {
+        "missing_rate": 0.0,
+        "replicate": 9,
+        "seed": 9017069
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 0,
+        "seed": 67042
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 1,
+        "seed": 1067045
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 2,
+        "seed": 2067048
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 3,
+        "seed": 3067051
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 4,
+        "seed": 4067054
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 5,
+        "seed": 5067057
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 6,
+        "seed": 6067060
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 7,
+        "seed": 7067063
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 8,
+        "seed": 8067066
+      },
+      {
+        "missing_rate": 0.05,
+        "replicate": 9,
+        "seed": 9067069
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 0,
+        "seed": 117042
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 1,
+        "seed": 1117045
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 2,
+        "seed": 2117048
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 3,
+        "seed": 3117051
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 4,
+        "seed": 4117054
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 5,
+        "seed": 5117057
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 6,
+        "seed": 6117060
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 7,
+        "seed": 7117063
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 8,
+        "seed": 8117066
+      },
+      {
+        "missing_rate": 0.1,
+        "replicate": 9,
+        "seed": 9117069
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 0,
+        "seed": 217042
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 1,
+        "seed": 1217045
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 2,
+        "seed": 2217048
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 3,
+        "seed": 3217051
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 4,
+        "seed": 4217054
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 5,
+        "seed": 5217057
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 6,
+        "seed": 6217060
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 7,
+        "seed": 7217063
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 8,
+        "seed": 8217066
+      },
+      {
+        "missing_rate": 0.2,
+        "replicate": 9,
+        "seed": 9217069
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 0,
+        "seed": 317042
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 1,
+        "seed": 1317045
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 2,
+        "seed": 2317048
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 3,
+        "seed": 3317051
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 4,
+        "seed": 4317054
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 5,
+        "seed": 5317057
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 6,
+        "seed": 6317060
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 7,
+        "seed": 7317063
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 8,
+        "seed": 8317066
+      },
+      {
+        "missing_rate": 0.3,
+        "replicate": 9,
+        "seed": 9317069
+      }
+    ]
+  }
+}

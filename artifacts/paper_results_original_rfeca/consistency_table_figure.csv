@@ -1,0 +1,7 @@
+mechanism,rate_pct,full_rmse,display_rmse,figure_rmse,table_figure_match,rounding_consistent
+mar,10,0.6388336206778935,0.639,0.639,True,True
+mar,20,0.6397229901203969,0.64,0.64,True,True
+mar,30,0.6394937412851157,0.639,0.639,True,True
+mcar,10,0.6146483301148795,0.615,0.615,True,True
+mcar,20,0.6142628969911292,0.614,0.614,True,True
+mcar,30,0.621264192718725,0.621,0.621,True,True

@@ -1,0 +1,9 @@
+mechanism,rate_pct,winner
+MCAR,5,OriginalRFECA
+MCAR,10,OriginalRFECA
+MCAR,20,OriginalRFECA
+MCAR,30,OriginalRFECA
+MAR,5,MissForest
+MAR,10,OriginalRFECA
+MAR,20,OriginalRFECA
+MAR,30,OriginalRFECA

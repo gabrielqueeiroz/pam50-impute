@@ -1,0 +1,11 @@
+mechanism,replicate,path,status,valid,n_genes,n_ok,n_fail,rmse,mae,wall_seconds,svr_coverage,fallback_count,classification,seed,mask_hash
+mcar,0,<repo-root>\artifacts\original_rfeca_reduced_metabric\mcar\rate_0.20\rep_0,completed,True,50,50,0,0.6210393322162794,0.40806372032054955,3268.3827047,1.0,0,A,200042,9b536694591b54dd
+mcar,1,<repo-root>\artifacts\original_rfeca_reduced_metabric\mcar\rate_0.20\rep_1,completed,True,50,50,0,0.6144334700654961,0.40652908219453165,2880.7537009999996,1.0,0,A,1200045,674e6a25a1b3487d
+mcar,2,<repo-root>\artifacts\original_rfeca_reduced_metabric\mcar\rate_0.20\rep_2,completed,True,50,50,0,0.6116540748837421,0.40303810081080643,4360.506344000001,1.0,0,A,2200048,a2b14f54a4a30964
+mcar,3,<repo-root>\artifacts\original_rfeca_reduced_metabric\mcar\rate_0.20\rep_3,completed,True,50,50,0,0.6084569191693275,0.4030464685448079,4351.461679600001,1.0,0,A,3200051,578caac8fb7947bb
+mcar,4,<repo-root>\artifacts\original_rfeca_reduced_metabric\mcar\rate_0.20\rep_4,completed,True,50,50,0,0.6157306886208015,0.4068909738830337,4262.3524889,1.0,0,A,4200054,999536e8b97d27c0
+mar,0,<repo-root>\artifacts\original_rfeca_reduced_metabric\mar\rate_0.20\rep_0,completed,True,50,50,0,0.6417125419656355,0.4197721781674413,4236.364920699998,1.0,0,A,217042,7fc2f2c153ce31fe
+mar,1,<repo-root>\artifacts\original_rfeca_reduced_metabric\mar\rate_0.20\rep_1,completed,True,50,50,0,0.6314675165357442,0.4162248254213697,4307.929459799998,1.0,0,A,1217045,66dcff0b9b3fd78b
+mar,2,<repo-root>\artifacts\original_rfeca_reduced_metabric\mar\rate_0.20\rep_2,completed,True,50,50,0,0.6377847399602956,0.4177898944708718,4179.666863900005,1.0,0,A,2217048,f5a2f577b75a9009
+mar,3,<repo-root>\artifacts\original_rfeca_reduced_metabric\mar\rate_0.20\rep_3,completed,True,50,50,0,0.643394014760074,0.4212699758822335,4183.656380700006,1.0,0,A,3217051,ab6dbc5c3a3e56d5
+mar,4,<repo-root>\artifacts\original_rfeca_reduced_metabric\mar\rate_0.20\rep_4,completed,True,50,50,0,0.644256137380235,0.42133195823563685,4158.024559099998,1.0,0,A,4217054,0f6fa27b6a541e02

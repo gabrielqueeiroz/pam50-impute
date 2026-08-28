@@ -1,0 +1,30 @@
+{
+  "method": "OriginalRFECA",
+  "evaluation_protocol": "repeated_mask_holdout",
+  "input_protocol": "target_wise_complete_predictors",
+  "predictor_values": "original_complete_matrix",
+  "selection_protocol": "leakage_safe",
+  "max_candidates": 49,
+  "use_scaler": false,
+  "inner_cv": 5,
+  "gene_workers": 16,
+  "conservative_workers": 10,
+  "mechanism": "mcar",
+  "rate": 0.2,
+  "replicates": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "resume": true,
+  "cohort": "metabric",
+  "seed_scheme": "v2",
+  "base_seed": 42,
+  "expected_seed_rep0": 200042,
+  "expected_mask_hash_rep0": "9b536694591b54dd",
+  "blas_threads": 1,
+  "out_root": "<repo-root>\\artifacts\\original_rfeca_reduced_metabric",
+  "config_hash": "2eaa8795cd26ea74"
+}

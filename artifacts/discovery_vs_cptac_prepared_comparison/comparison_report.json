@@ -1,0 +1,93 @@
+{
+  "generated_at_utc": "2026-07-19T21:48:48.233044+00:00",
+  "pipeline_rules_shared": [
+    "sample_id | 50 PAM50 genes (canonical order) | PAM50",
+    "Keep LumA/LumB/Her2/Basal only",
+    "Drop rows with any NA among the 50 genes",
+    "No scaling/centering/transform at preparation time"
+  ],
+  "discovery": {
+    "name": "discovery",
+    "n_samples": 117,
+    "n_genes": 50,
+    "class_distribution": {
+      "LumA": 57,
+      "Basal": 29,
+      "LumB": 17,
+      "Her2": 14
+    },
+    "expression": {
+      "min": -13.8318,
+      "max": 13.203,
+      "mean": -0.07016080341880343,
+      "std": 2.8347244309934823,
+      "median": 0.029699999999999997
+    },
+    "n_unique_sample_ids": 117,
+    "n_missing_values": 0
+  },
+  "cptac_linkedomics": {
+    "name": "cptac_linkedomics",
+    "n_samples": 80,
+    "n_genes": 50,
+    "class_distribution": {
+      "LumA": 38,
+      "Basal": 20,
+      "Her2": 12,
+      "LumB": 10
+    },
+    "expression": {
+      "min": -10.7012,
+      "max": 10.8386,
+      "mean": 0.013566125,
+      "std": 2.3236773554239374,
+      "median": 0.06805
+    },
+    "n_unique_sample_ids": 80,
+    "n_missing_values": 0
+  },
+  "class_count_delta": {
+    "Basal": -9,
+    "Her2": -2,
+    "LumA": -19,
+    "LumB": -7
+  },
+  "n_delta": -37,
+  "paired_overlap": {
+    "available": true,
+    "n_discovery": 117,
+    "n_cptac_prepared": 80,
+    "n_putative_map_rows": 117,
+    "n_overlap_after_shared_prep": 80,
+    "frac_discovery_covered": 0.6837606837606838,
+    "frac_cptac_covered": 1.0,
+    "label_agreement": 0.9875,
+    "pearson_median": 0.9999999998711429,
+    "pearson_min": 0.9999999994549521,
+    "cosine_z_median": 0.9999999998711426,
+    "max_abs_raw_median": 1.2839000000000005,
+    "affine_a_median": 0.8633977626864866,
+    "affine_rmse_median": 3.732905334102197e-05,
+    "exact_raw_matches": 0
+  },
+  "unsupervised_nn": {
+    "discovery_to_cptac_best_cosine_median": 0.9999999998083188,
+    "discovery_to_cptac_best_cosine_min": 0.46209856398129356,
+    "frac_cosine_ge_0.999": 0.6837606837606838,
+    "frac_cosine_ge_0.99": 0.6837606837606838,
+    "note": "Nearest CPTAC prepared row for each discovery row after shared NA filter; incomplete CPTAC samples removed by the shared pipeline, so coverage < 117."
+  },
+  "fingerprints": {
+    "discovery_values_and_labels_sha256": "9994c4ed68d2c3c299aeb2a4d609c8edc091768b46d2dca77ce3f5c669838bea",
+    "cptac_values_and_labels_sha256": "86e5987f8299bbf53868db007dbe5e2aa3e53c66ff22e2519d1d71022385ec65",
+    "identical_prepared_matrices": false
+  },
+  "conclusion": {
+    "summary": "Same prep rules applied. Prepared CPTAC is smaller than discovery because LinkedOmics RNAseq has native NAs among PAM50 genes and those rows are dropped. On the overlapping complete samples, profiles remain near-perfect affine matches to discovery (not byte-identical).",
+    "cohort_keys": {
+      "laboratory": "discovery",
+      "public_reference": "cptac_linkedomics"
+    },
+    "rename_policy": "Do not rename discovery to CPTAC."
+  }
+}

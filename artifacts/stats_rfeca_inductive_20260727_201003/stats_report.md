@@ -1,0 +1,36 @@
+# Inductive RFECA stats (seed scheme v2)
+
+- Generated (UTC): `2026-07-27T20:10:08.410889+00:00`
+
+## Method
+- Unit: mean over 5 CV folds within replicate (n=10).
+- Imputers: RFECA_SVR(k=5/10/20) only (inductive fit).
+- Tests: Friedman omnibus; Wilcoxon + Holm; bootstrap CI95 on paired delta.
+
+## Highlights
+- Inductive RFECA-only consolidation (seed scheme v2).
+- Compares k=5/10/20 only; do not merge with legacy Mean/KNN/MissForest masks.
+- Runs included: 2.
+- - cptac_2c MCAR: `discovery_full_rfeca_20260727_161656`
+- - metabric MCAR: `metabric_full_rfeca_20260727_163213`
+- Friedman | METABRIC MCAR f1_macro @ 5%: chi2=1.400, p=0.4966.
+- Friedman | METABRIC MCAR f1_macro @ 10%: chi2=0.200, p=0.9048.
+- Friedman | METABRIC MCAR f1_macro @ 20%: chi2=5.400, p=0.06721.
+- Friedman | METABRIC MCAR f1_macro @ 30%: chi2=3.200, p=0.2019.
+- Friedman | METABRIC MCAR rmse @ 5%: chi2=20.000, p=4.54e-05.
+- Friedman | METABRIC MCAR rmse @ 10%: chi2=20.000, p=4.54e-05.
+- Friedman | METABRIC MCAR rmse @ 20%: chi2=20.000, p=4.54e-05.
+- Friedman | METABRIC MCAR rmse @ 30%: chi2=20.000, p=4.54e-05.
+- k20 vs k5 | METABRIC MCAR f1_macro @ 5%: Δ=-0.0007 [-0.0033, +0.0015], p_Holm=1.
+- k20 vs k5 | METABRIC MCAR f1_macro @ 10%: Δ=+0.0006 [-0.0018, +0.0037], p_Holm=1.
+- k20 vs k5 | METABRIC MCAR f1_macro @ 20%: Δ=+0.0027 [-0.0003, +0.0055], p_Holm=0.3203.
+- k20 vs k5 | METABRIC MCAR f1_macro @ 30%: Δ=+0.0031 [+0.0008, +0.0051], p_Holm=0.1113.
+- k20 vs k5 | METABRIC MCAR rmse @ 5%: Δ=-0.0354 [-0.0384, -0.0324], p_Holm=0.005859.
+- k20 vs k5 | METABRIC MCAR rmse @ 10%: Δ=-0.0341 [-0.0361, -0.0320], p_Holm=0.005859.
+- k20 vs k5 | METABRIC MCAR rmse @ 20%: Δ=-0.0331 [-0.0343, -0.0321], p_Holm=0.005859.
+- k20 vs k5 | METABRIC MCAR rmse @ 30%: Δ=-0.0223 [-0.0235, -0.0212], p_Holm=0.005859.
+
+## Artifacts
+- `descriptives_rfeca.csv`
+- `pairwise_rfeca.csv`
+- `friedman_rfeca.csv`

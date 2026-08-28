@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "n_slots_run": 40,
+  "wall_seconds": 382.5064588999958,
+  "output_dir": "artifacts\\fair_baseline_holdout_vs_rfeca"
+}

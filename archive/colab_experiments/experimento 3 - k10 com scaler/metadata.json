@@ -1,0 +1,38 @@
+{
+  "corr_csv_path": "correlation_table_pam50_full.csv",
+  "n_reps": 10,
+  "n_splits": 5,
+  "random_state": 42,
+  "missing_rates_exp1": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "missing_rates_exp2": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "imputers": [
+    "RFECA_SVR(k=10)"
+  ],
+  "exp2_models": [
+    "SVC",
+    "LogReg",
+    "RF",
+    "GB",
+    "EnsembleSoft",
+    "EnsembleHard"
+  ],
+  "rfeca": {
+    "top_k": 10,
+    "use_abs_corr": true,
+    "svr_kernel": "linear",
+    "C": 1.0,
+    "epsilon": 0.1,
+    "min_train_samples": 10
+  }
+}

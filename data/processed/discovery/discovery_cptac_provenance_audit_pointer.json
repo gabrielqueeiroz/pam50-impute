@@ -1,0 +1,7 @@
+{
+  "audit_artifact_dir": "artifacts/discovery_cptac_provenance_audit",
+  "conclusion": "Highly likely CPTAC",
+  "cohort_key_unchanged": "discovery",
+  "canvas": "canvases/discovery-cptac-provenance-audit.canvas.tsx",
+  "putative_id_map": "artifacts/discovery_cptac_provenance_audit/putative_discovery_to_cptac_sample_map.csv"
+}

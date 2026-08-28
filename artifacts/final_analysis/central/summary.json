@@ -1,0 +1,36 @@
+{
+  "methods_compared": [
+    "Mean",
+    "KNN",
+    "MissForest",
+    "OriginalRFECA"
+  ],
+  "excluded": [
+    "RFECA-k5",
+    "RFECA-k10",
+    "RFECA-k20"
+  ],
+  "n_cells": 8,
+  "rmse_wins": {
+    "OriginalRFECA": 7,
+    "MissForest": 1
+  },
+  "f1_wins": {
+    "OriginalRFECA": 6,
+    "MissForest": 2
+  },
+  "original_rfeca_rmse_wins": 7,
+  "original_rfeca_f1_wins": 6,
+  "only_rmse_loss": [
+    {
+      "mechanism": "MAR",
+      "rate_pct": 5,
+      "rmse_winner": "MissForest"
+    }
+  ],
+  "sources": {
+    "imputation": "artifacts/final_analysis/results_tables.csv",
+    "classification_baselines": "artifacts/paper_results_original_rfeca/comparison/table06_metabric_classification.csv",
+    "classification_rfeca": "artifacts/paper_results_original_rfeca/comparison/original_rfeca_classification_summary.csv"
+  }
+}

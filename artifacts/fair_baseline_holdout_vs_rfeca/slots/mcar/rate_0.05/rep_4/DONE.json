@@ -1,0 +1,10 @@
+{
+  "mechanism": "mcar",
+  "missing_rate": 0.05,
+  "replicate": 4,
+  "seed": 4050054,
+  "mask_hash": "700af1b560d85ba9",
+  "wall_seconds": 79.23745890002465,
+  "n_gene_rows": 150,
+  "status": "ok"
+}

@@ -1,0 +1,10 @@
+{
+  "mechanism": "mar",
+  "missing_rate": 0.05,
+  "replicate": 4,
+  "seed": 4067054,
+  "mask_hash": "4e9de7fa77af46d9",
+  "wall_seconds": 83.84332610003185,
+  "n_gene_rows": 150,
+  "status": "ok"
+}

@@ -1,0 +1,19 @@
+{
+  "phase": "done",
+  "rates": [
+    0.1,
+    0.3
+  ],
+  "updated_at_utc": "2026-08-02T05:47:14.546094+00:00",
+  "twenty_pct_slots_complete": true,
+  "active_20pct_pids": [],
+  "gene_workers": 16,
+  "command": "<local-user>\\.pyenv\\pyenv-win\\versions\\3.13.5\\python.exe <repo-root>\\experiments\\run_original_rfeca_targetwise.py --confirm --phase mcar --replicates 0 1 2 3 4 --resume --auto-continue --gene-workers 16 --rates 0.10 0.30 --evaluation repeated_mask_holdout",
+  "started_at_utc": "2026-08-01T06:12:22.625516+00:00",
+  "artifacts_root": "<repo-root>\\artifacts\\original_rfeca_reduced_metabric",
+  "order": "MCAR(0.10\u21920.30) then MAR(0.10\u21920.30)",
+  "runner_exit_code": 0,
+  "all_slots_complete": true,
+  "elapsed_hours": 23.581088156236543,
+  "finished_at_utc": "2026-08-02T05:47:14.545679+00:00"
+}

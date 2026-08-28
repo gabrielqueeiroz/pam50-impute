@@ -1,0 +1,105 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env
+.python-version
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env.*
+credentials*.json
+**/secrets/
+
+# Optional local caches / notebook checkpoints
+*.npy
+.ipynb_checkpoints/
+
+# Transient logs / scratch
+*.log
+**/progress.jsonl
+artifacts/**/__pycache__/
+
+# ---------------------------------------------------------------------------
+# Restricted / non-redistributable source data
+# Raw METABRIC microarray + clinical (cBioPortal download)
+# Raw LinkedOmics CPTAC RNAseq / proteome / clinical
+# ---------------------------------------------------------------------------
+data/raw/metabric/
+data/raw/cptac_linkedomics/
+data/raw/discovery/
+data/external/
+
+# Analysis-ready cohort matrices (prepare locally; not shipped in this repo)
+data/processed/metabric/metabric_pam50_4class.csv
+data/processed/metabric/excluded_samples.csv
+data/processed/metabric/native_missingness_report.csv
+data/processed/**/df_MI_no_missing.csv
+archive/**/df_MI_no_missing.csv
+
+# Clinical tables with demographics (age, race, etc.)
+**/HS_CPTAC_BRCA_2018_CLI.tsi
+legacy/cptac.csv
+legacy/cptac_subtype.csv
+
+# Processed matrices that carry recovered biological sample IDs
+# (discovery integer-index source CSVs remain tracked)
+data/processed/discovery/discovery_pam50_4class.csv
+data/processed/discovery/discovery_originally_observed_mask.csv
+data/processed/cptac_linkedomics/cptac_linkedomics_pam50_4class.csv
+data/processed/cptac_linkedomics/cptac_linkedomics_excluded_samples.csv
+
+# Re-identification / sample-map artifacts
+**/discovery_sample_id_mapping.csv
+**/putative_discovery_to_cptac_sample_map.csv
+**/nearest_profile_matches.csv
+**/paired_overlap_samples.csv
+**/discovery_vs_legacy_cptac_match.csv
+**/legacy_vs_linkedomics_sample_match.csv
+
+# ---------------------------------------------------------------------------
+# Heavy regenerable experiment internals (not needed to read results)
+# ---------------------------------------------------------------------------
+*.parquet
+*.joblib
+artifacts/**/checkpoint/
+artifacts/**/imputer_checkpoint/
+artifacts/**/checkpoints/
+artifacts/**/gene_models.joblib
+artifacts/**/gene_selection_audit.json
+artifacts/**/worker_*/
+
+# Local profiling / worker-tuning trees
+artifacts/profiling/
+artifacts/parallel_benchmark_extended/
+
+# Intermediate method-audit runs (gene-level model dumps)
+artifacts/original_rfeca_leakage_safe_no_scaler_maxcand49/
+artifacts/original_rfeca_target_wise_leakage_safe_no_scaler_maxcand49/
+artifacts/original_rfeca_rfaca/
+!artifacts/original_rfeca_rfaca/README.md
+
+# Large nested classifier campaign raw dumps (aggregates live in paper_results/)
+artifacts/metabric_multiclf_mcar_20260729_031215/
+artifacts/metabric_multiclf_mar_20260729_184033/
+
+# Local / incomplete experiment trees not part of the published freeze
+artifacts/baseline_gene_metrics_20260804_154507/
+artifacts/baseline_gene_metrics_mcar_mar_20pct_reps0-4/
+artifacts/discovery_full_mar_20260725_044951/
+artifacts/original_rfeca_target_wise_mask_holdout/
+
+# Scratch helpers inside artifact trees
+artifacts/original_rfeca_expanded_rates/wait_rate05.py
